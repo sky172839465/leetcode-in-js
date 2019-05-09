@@ -6,7 +6,7 @@
 LeetCode solution in JavaScript. ✍️
 
 ### Run solution
-👋Don't forget install [nodejs][]
+👋 Don't forget install [nodejs][]
 ```cmd
 $ node easy/001-two-sum.js
 ```
