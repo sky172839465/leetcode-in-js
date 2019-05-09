@@ -6,13 +6,14 @@
 LeetCode solution in JavaScript. ✍️
 
 ### Run solution
-👋 Don't forget install [nodejs][]
+👋 Don't forget install [nodejs][] and `npm install`
 ```cmd
 $ node easy/001-two-sum.js
 ```
 
 ### Easy
   - [001. Two Sum][]
+  - [007. Reverse Integer][]
 
 ### Medium
 
@@ -27,3 +28,4 @@ $ node easy/001-two-sum.js
 [nodejs]: https://nodejs.org
 
 [001. Two Sum]: ./easy/001-two-sum.js
+[007. Reverse Integer]: ./easy/007-reverse_integer.js
