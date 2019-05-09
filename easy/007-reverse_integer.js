@@ -1,7 +1,7 @@
 /**
- * 1. 使用 map 紀錄不符合目前比較的項目 { [現在值]: 索引 }
- * 2. 在 map 中找到 (target - 現在值) 的欄位就代表有符合兩數相加等於 target 的項目
- * 3. result 先放 map 的索引再放目前值的索引，因為 map 的索引一定比現在值早出現
+ * 1. 數字判斷正負值
+ * 2. 以文字重組數字
+ * 3. 乘回原本的正負值取得反轉結果
  */
 const { demo } = require('../demoHelper')
 const reverse = x => {
@@ -16,3 +16,4 @@ const reverse = x => {
   return reverseNum
 }
 demo(reverse, [123], 321)
+demo(reverse, [1230], 321)
