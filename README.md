@@ -28,4 +28,4 @@ $ node easy/001-two-sum.js
 [nodejs]: https://nodejs.org
 
 [001. Two Sum]: ./easy/001-two-sum.js
-[007. Reverse Integer]: ./easy/007-reverse_integer.js
+[007. Reverse Integer]: ./easy/007-reverse-integer.js
