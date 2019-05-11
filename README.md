@@ -15,6 +15,7 @@ $ node easy/001-two-sum.js
   - [001. Two Sum][]
   - [007. Reverse Integer][]
   - [009. Palindrome Number][]
+  - [013. Roman to Integer][]
 
 ### Medium
 
@@ -31,3 +32,4 @@ $ node easy/001-two-sum.js
 [001. Two Sum]: ./easy/001-two-sum.js
 [007. Reverse Integer]: ./easy/007-reverse-integer.js
 [009. Palindrome Number]: ./easy/009-palindrome-number.js
+[013. Roman to Integer]: ./easy/013-roman-to-integer.js
