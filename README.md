@@ -36,7 +36,7 @@ $ npm run test __test__/easy/001-two-sum.test.js
 [conventional-commits-url]: https://conventionalcommits.org
 [nodejs]: https://nodejs.org
 
-[001. Two Sum]: ./easy/001-two-sum.js
-[007. Reverse Integer]: ./easy/007-reverse-integer.js
-[009. Palindrome Number]: ./easy/009-palindrome-number.js
-[013. Roman to Integer]: ./easy/013-roman-to-integer.js
+[001. Two Sum]: ./src/easy/001-two-sum.js
+[007. Reverse Integer]: ./src/easy/007-reverse-integer.js
+[009. Palindrome Number]: ./src/easy/009-palindrome-number.js
+[013. Roman to Integer]: ./src/easy/013-roman-to-integer.js
