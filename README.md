@@ -1,4 +1,4 @@
-# leetcode-in-js [![Written by javaScript][javascript-image]][javascript-url]
+# LeetCode [![Written by javaScript][javascript-image]][javascript-url]
 [![Build Status][travis-image]][travis-url]
 [![Coverage Status][codecov-image]][codecov-url]
 [![Tested With Jest][jest-image]][jest-url]
