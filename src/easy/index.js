@@ -4,6 +4,11 @@ import isPalindrome from './009-palindrome-number'
 import romanToInt from './013-roman-to-integer'
 import longestCommonPrefix from './014-longest-common-prefix'
 import isValid from './020-valid-parentheses'
+import mergeTwoLists, {
+  ListNode,
+  getFullNodeValues,
+  createListNode
+} from './021-merge-two-sorted-lists'
 
 export {
   twoSum,
@@ -11,5 +16,9 @@ export {
   isPalindrome,
   romanToInt,
   longestCommonPrefix,
-  isValid
+  isValid,
+  mergeTwoLists,
+  ListNode,
+  getFullNodeValues,
+  createListNode
 }

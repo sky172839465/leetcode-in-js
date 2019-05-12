@@ -35,7 +35,7 @@ LeetCode solution in JavaScript. ✍️
 |013|Roman to Integer|Easy|[Link](./src/easy/013-roman-to-integer.js)|[Link](./__tests__/easy/013-roman-to-integer.test.js)|
 |014|Longest Common Prefix|Easy|[Link](./src/easy/014-longest-common-prefix.js)|[Link](./__tests__/easy/014-longest-common-prefix.test.js)|
 |020|Valid Parentheses|Easy|[Link](./src/easy/020-valid-parentheses.js)|[Link](./__tests__/easy/020-valid-parentheses.test.js)|
-
+|021|Merge Two Sorted Lists|Easy|[Link](./src/easy/021-merge-two-sorted-lists.js)|[Link](./__tests__/easy/021-merge-two-sorted-lists.test.js)|
 
 [travis-image]: https://img.shields.io/travis/sky172839465/leetcode-in-js.svg?branch=master
 [travis-url]: https://travis-ci.org/sky172839465/leetcode-in-js
