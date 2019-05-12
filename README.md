@@ -1,4 +1,6 @@
 # leetcode-in-js
+[![Build Status][travis-image]][travis-url]
+[![Coverage Status][codecov-image]][codecov-url]
 [![Written by javaScript][javascript-image]][javascript-url]
 [![JavaScript Style Guide][standard-image]][standard-url]
 [![Conventional Commits][conventional-commits-image]][conventional-commits-url]
@@ -7,8 +9,9 @@ LeetCode solution in JavaScript. ✍️
 
 ### Run solution
 👋 Don't forget install [nodejs][] and `npm install`
+
 ```cmd
-$ node easy/001-two-sum.js
+$ npm run test __test__/easy/001-two-sum.test.js
 ```
 
 ### Easy
@@ -21,6 +24,10 @@ $ node easy/001-two-sum.js
 
 ### Hard
 
+[travis-image]: https://img.shields.io/travis/sky172839465/leetcode-in-js.svg?branch=master
+[travis-url]: https://travis-ci.org/sky172839465/leetcode-in-js
+[codecov-image]: https://img.shields.io/codecov/c/github/sky172839465/leetcode-in-js.svg
+[codecov-url]: https://codecov.io/gh/sky172839465/leetcode-in-js
 [standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [standard-url]: https://standardjs.com
 [javascript-image]: https://img.shields.io/badge/Language-JavaScript-yellow.svg
