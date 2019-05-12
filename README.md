@@ -7,22 +7,76 @@
 
 LeetCode solution in JavaScript. ✍️
 
-### Run solution
-👋 Don't forget install [nodejs][] and `npm install`
+## **🚀 Getting Start**
+### ❗️Before start don't forget install [nodejs][]
+1. **Clone project**
+    ```sh
+    $ git clone https://github.com/sky172839465/leetcode-in-js.git
+    ```
+2. **Install dependency**
+    ```sh
+    $ npm install
+    ```
+3. **Run single solution**
+    ```sh
+    $ npm run test __test__/easy/001-two-sum.test.js
+    ```
+    **Run all solution**
+    ```sh
+    $ npm run test
+    ```
 
-```cmd
-$ npm run test __test__/easy/001-two-sum.test.js
-```
-
-### Easy
-  - [001. Two Sum][]
-  - [007. Reverse Integer][]
-  - [009. Palindrome Number][]
-  - [013. Roman to Integer][]
-
-### Medium
-
-### Hard
+## **📚 Contents**
+<table>
+  <thead>
+    <tr>
+      <td>#</td>
+      <td>Problem</td>
+      <td>Difficulty</td>
+      <td>Solution</td>
+    </tr>
+  </thead>
+  <tr>
+    <td>001</td>
+    <td>Two Sum</td>
+    <td>Easy</td>
+    <td>
+      <a href="./src/easy/001-two-sum.js">
+        <center> 💡</center>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>007</td>
+    <td>Reverse Integer</td>
+    <td>Easy</td>
+    <td>
+      <a href="./src/easy/007-reverse-integer.js">
+        <center> 💡</center>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>009</td>
+    <td>Palindrome Numbe</td>
+    <td>Easy</td>
+    <td>
+      <a href="./src/easy/009-palindrome-number.js">
+        <center> 💡</center>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>013</td>
+    <td>Roman to Integer</td>
+    <td>Easy</td>
+    <td>
+      <a href="./src/easy/013-roman-to-integer.js">
+        <center> 💡</center>
+      </a>
+    </td>
+  </tr>
+</table>
 
 [travis-image]: https://img.shields.io/travis/sky172839465/leetcode-in-js.svg?branch=master
 [travis-url]: https://travis-ci.org/sky172839465/leetcode-in-js
@@ -35,8 +89,3 @@ $ npm run test __test__/easy/001-two-sum.test.js
 [conventional-commits-image]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
 [conventional-commits-url]: https://conventionalcommits.org
 [nodejs]: https://nodejs.org
-
-[001. Two Sum]: ./src/easy/001-two-sum.js
-[007. Reverse Integer]: ./src/easy/007-reverse-integer.js
-[009. Palindrome Number]: ./src/easy/009-palindrome-number.js
-[013. Roman to Integer]: ./src/easy/013-roman-to-integer.js
