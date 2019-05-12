@@ -7,23 +7,24 @@
  */
 const longestCommonPrefix = strs => {
   let prefix = ''
+  if (strs.length === 0) {
+    return prefix
+  }
+  if (strs.length === 1) {
+    return strs[0]
+  }
   let isContinue = true
-  if (strs.length > 0) {
-    if (strs.length === 1) {
-      return strs[0]
+  while (isContinue) {
+    const index = prefix.length
+    const currentPrefix = strs[0][index]
+    for (let i = 1; i < strs.length; i++) {
+      if (!strs[i][index] || strs[i][index] !== currentPrefix) {
+        isContinue = false
+        break
+      }
     }
-    while (isContinue) {
-      const index = prefix.length
-      const currentPrefix = strs[0][index]
-      for (let i = 1; i < strs.length; i++) {
-        if (!strs[i][index] || strs[i][index] !== currentPrefix) {
-          isContinue = false
-          break
-        }
-      }
-      if (isContinue) {
-        prefix += currentPrefix
-      }
+    if (isContinue) {
+      prefix += currentPrefix
     }
   }
   return prefix
