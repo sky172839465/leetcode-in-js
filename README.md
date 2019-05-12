@@ -33,6 +33,7 @@ LeetCode solution in JavaScript. ✍️
 |007|Reverse Integer|Easy|[Link](./src/easy/007-reverse-integer.js)|[Link](./__tests__/easy/007-reverse-integer.test.js)|
 |009|Palindrome Numbe|Easy|[Link](./src/easy/009-palindrome-number.js)|[Link](./__tests__/easy/009-palindrome-number.test.js)|
 |013|Roman to Integer|Easy|[Link](./src/easy/013-roman-to-integer.js)|[Link](./__tests__/easy/013-roman-to-integer.test.js)|
+|014|Longest Common Prefix|Easy|[Link](./src/easy/014-longest-common-prefix.js)|[Link](./__tests__/easy/014-longest-common-prefix.test.js)|
 
 [travis-image]: https://img.shields.io/travis/sky172839465/leetcode-in-js.svg?branch=master
 [travis-url]: https://travis-ci.org/sky172839465/leetcode-in-js
