@@ -19,7 +19,7 @@ LeetCode solution in JavaScript. ✍️
     ```
 3. **Run single solution**
     ```sh
-    $ npm run test __test__/easy/001-two-sum.test.js
+    $ npm run test __tests__/easy/001-two-sum.test.js
     ```
     **Run all solution**
     ```sh
@@ -27,56 +27,12 @@ LeetCode solution in JavaScript. ✍️
     ```
 
 ## **📚 Contents**
-<table>
-  <thead>
-    <tr>
-      <td>#</td>
-      <td>Problem</td>
-      <td>Difficulty</td>
-      <td>Solution</td>
-    </tr>
-  </thead>
-  <tr>
-    <td>001</td>
-    <td>Two Sum</td>
-    <td>Easy</td>
-    <td>
-      <a href="./src/easy/001-two-sum.js">
-        <center> 💡</center>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>007</td>
-    <td>Reverse Integer</td>
-    <td>Easy</td>
-    <td>
-      <a href="./src/easy/007-reverse-integer.js">
-        <center> 💡</center>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>009</td>
-    <td>Palindrome Numbe</td>
-    <td>Easy</td>
-    <td>
-      <a href="./src/easy/009-palindrome-number.js">
-        <center> 💡</center>
-      </a>
-    </td>
-  </tr>
-  <tr>
-    <td>013</td>
-    <td>Roman to Integer</td>
-    <td>Easy</td>
-    <td>
-      <a href="./src/easy/013-roman-to-integer.js">
-        <center> 💡</center>
-      </a>
-    </td>
-  </tr>
-</table>
+| # | Problem | Difficulty | Solution | Test Case |
+| :---: | :--- | :---: | :---: | :---: |
+| 001 |Two Sum|Easy|[Link](./src/easy/001-two-sum.js)|[Link](./__tests__/easy/001-two-sum.test.js)|
+|007|Reverse Integer|Easy|[Link](./src/easy/007-reverse-integer.js)|[Link](./__tests__/easy/007-reverse-integer.test.js)|
+|009|Palindrome Numbe|Easy|[Link](./src/easy/009-palindrome-number.js)|[Link](./__tests__/easy/009-palindrome-number.test.js)|
+|013|Roman to Integer|Easy|[Link](./src/easy/013-roman-to-integer.js)|[Link](./__tests__/easy/013-roman-to-integer.test.js)|
 
 [travis-image]: https://img.shields.io/travis/sky172839465/leetcode-in-js.svg?branch=master
 [travis-url]: https://travis-ci.org/sky172839465/leetcode-in-js
