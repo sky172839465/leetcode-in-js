@@ -21,7 +21,7 @@ LeetCode solution in JavaScript. ✍️
     ```sh
     $ npm run test __tests__/easy/001-two-sum.test.js
     ```
-    **Run all solution**
+    **Run all solutions**
     ```sh
     $ npm run test
     ```
