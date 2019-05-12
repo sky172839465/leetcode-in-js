@@ -3,7 +3,6 @@
  * 2. 以文字重組數字
  * 3. 乘回原本的正負值取得反轉結果
  */
-const { demo } = require('../demoHelper')
 const reverse = x => {
   const min = -Math.pow(2, 31)
   const max = Math.pow(2, 31) - 1
@@ -15,5 +14,5 @@ const reverse = x => {
   }
   return reverseNum
 }
-demo(reverse, [123], 321)
-demo(reverse, [1230], 321)
+
+export default reverse

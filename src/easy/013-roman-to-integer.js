@@ -3,7 +3,6 @@
  * 2. 用前兩個字找對應，找不到則改用第一個字
  * 3. 扣掉對應羅馬數字後重複直到全部輸入值轉換完畢
  */
-const { demo } = require('../demoHelper')
 const ROMAN_KEY_MAP = {
   I: 1,
   V: 5,
@@ -36,8 +35,5 @@ const romanToInt = s => {
   }
   return result
 }
-demo(romanToInt, ['III'], 3)
-demo(romanToInt, ['IV'], 4)
-demo(romanToInt, ['IX'], 9)
-demo(romanToInt, ['LVIII'], 58)
-demo(romanToInt, ['MCMXCIV'], 1994)
+
+export default romanToInt
