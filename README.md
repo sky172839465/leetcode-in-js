@@ -7,7 +7,7 @@
 
 LeetCode solution in JavaScript. ✍️
 
-## **🚀 Getting Start**
+## 🚀 **Getting Start**
 ### ❗️Before start don't forget install [nodejs][]
 1. **Clone project**
     ```sh
@@ -26,7 +26,7 @@ LeetCode solution in JavaScript. ✍️
     $ npm run test
     ```
 
-## **📚 Contents**
+## 📚 **Contents**
 | # | Problem | Difficulty | Solution | Test Case |
 | :---: | :--- | :---: | :---: | :---: |
 | 001 |Two Sum|Easy|[Link](./src/easy/001-two-sum.js)|[Link](./__tests__/easy/001-two-sum.test.js)|
