@@ -1,4 +1,4 @@
-import isPalindrome from '../../src/easy/009-palindrome-number'
+import { isPalindrome } from '../../src/easy'
 
 test('isPalindrome test case', () => {
   expect(isPalindrome(121)).toBeTruthy()

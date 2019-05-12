@@ -1,6 +1,6 @@
-import longestCommonPrefix from '../../src/easy/014-longest-common-prefix'
+import { longestCommonPrefix } from '../../src/easy'
 
-test('twoSum test case', () => {
+test('longestCommonPrefix test case', () => {
   expect(longestCommonPrefix(['flower', 'flow', 'flight'])).toEqual('fl')
   expect(longestCommonPrefix(['dog', 'racecar', 'car'])).toEqual('')
   expect(longestCommonPrefix([])).toEqual('')

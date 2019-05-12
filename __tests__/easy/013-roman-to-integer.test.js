@@ -1,4 +1,4 @@
-import romanToInt from '../../src/easy/013-roman-to-integer'
+import { romanToInt } from '../../src/easy'
 
 test('romanToInt test case', () => {
   expect(romanToInt('III')).toEqual(3)

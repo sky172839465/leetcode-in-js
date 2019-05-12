@@ -1,4 +1,4 @@
-import reverse from '../../src/easy/007-reverse-integer'
+import { reverse } from '../../src/easy'
 
 test('reverse test case', () => {
   expect(reverse(123)).toEqual(321)
