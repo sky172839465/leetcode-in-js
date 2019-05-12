@@ -18,7 +18,8 @@ const longestCommonPrefix = strs => {
     const index = prefix.length
     const currentPrefix = strs[0][index]
     for (let i = 1; i < strs.length; i++) {
-      if (!strs[i][index] || strs[i][index] !== currentPrefix) {
+      const comparePrefix = strs[i][index]
+      if (!comparePrefix || comparePrefix !== currentPrefix) {
         isContinue = false
         break
       }
