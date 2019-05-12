@@ -1,7 +1,7 @@
-# leetcode-in-js
+# leetcode-in-js [![Written by javaScript][javascript-image]][javascript-url]
 [![Build Status][travis-image]][travis-url]
 [![Coverage Status][codecov-image]][codecov-url]
-[![Written by javaScript][javascript-image]][javascript-url]
+[![Tested With Jest][jest-image]][jest-url]
 [![JavaScript Style Guide][standard-image]][standard-url]
 [![Conventional Commits][conventional-commits-image]][conventional-commits-url]
 
@@ -41,10 +41,12 @@ LeetCode solution in JavaScript. ✍️
 [travis-url]: https://travis-ci.org/sky172839465/leetcode-in-js
 [codecov-image]: https://img.shields.io/codecov/c/github/sky172839465/leetcode-in-js.svg
 [codecov-url]: https://codecov.io/gh/sky172839465/leetcode-in-js
+[jest-image]: https://img.shields.io/badge/tested_with-jest-99424f.svg
+[jest-url]: https://github.com/facebook/jest
 [standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [standard-url]: https://standardjs.com
 [javascript-image]: https://img.shields.io/badge/Language-JavaScript-yellow.svg
-[javascript-url]: https://img.shields.io
+[javascript-url]: https://zh.wikipedia.org/wiki/JavaScript
 [conventional-commits-image]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
 [conventional-commits-url]: https://conventionalcommits.org
 [nodejs]: https://nodejs.org
