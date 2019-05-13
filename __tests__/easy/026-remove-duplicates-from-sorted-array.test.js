@@ -13,6 +13,10 @@ test('removeDuplicates test case', () => {
     {
       testValue: [],
       expectValue: []
+    },
+    {
+      testValue: [1, 1],
+      expectValue: [1]
     }
   ]
   testCaseList.forEach(({ testValue, expectValue }) => {
