@@ -36,6 +36,7 @@ LeetCode solution in JavaScript. ✍️
 |014|Longest Common Prefix|Easy|[Link](./src/easy/014-longest-common-prefix.js)|[Link](./__tests__/easy/014-longest-common-prefix.test.js)|
 |020|Valid Parentheses|Easy|[Link](./src/easy/020-valid-parentheses.js)|[Link](./__tests__/easy/020-valid-parentheses.test.js)|
 |021|Merge Two Sorted Lists|Easy|[Link](./src/easy/021-merge-two-sorted-lists.js)|[Link](./__tests__/easy/021-merge-two-sorted-lists.test.js)|
+|026|Remove Duplicates from Sorted Array|Easy|[Link](./src/easy/026-remove-duplicates-from-sorted-array.js)|[Link](./__tests__/easy/026-remove-duplicates-from-sorted-array.test.js)|
 
 [travis-image]: https://img.shields.io/travis/sky172839465/leetcode-in-js.svg?branch=master
 [travis-url]: https://travis-ci.org/sky172839465/leetcode-in-js
