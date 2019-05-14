@@ -39,6 +39,7 @@ LeetCode solution in JavaScript. ✍️
 |027|[Remove Element][]|Easy|[Link](./src/easy/027-remove-element.js)|[Link](./__tests__/easy/027-remove-element.test.js)|
 |028|[Implement strStr()][]|Easy|[Link](./src/easy/028-implement-strstr.js)|[Link](./__tests__/easy/028-implement-strstr.test.js)|
 |035|[Search Insert Position][]|Easy|[Link](./src/easy/035-search-insert-position.js)|[Link](./__tests__/easy/035-search-insert-position.test.js)|
+|038|[Count and Say][]|Easy|[Link](./src/easy/038-count-and-say.js)|[Link](./__tests__/easy/038-count-and-say.test.js)|
 
 <!-- badges -->
 [travis-image]: https://img.shields.io/travis/sky172839465/leetcode-in-js.svg?branch=master
@@ -66,3 +67,4 @@ LeetCode solution in JavaScript. ✍️
 [Remove Element]: https://leetcode.com/problems/remove-element/
 [Implement strStr()]: https://leetcode.com/problems/implement-strstr/
 [Search Insert Position]: https://leetcode.com/problems/search-insert-position/
+[Count and Say]: https://leetcode.com/problems/count-and-say/
