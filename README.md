@@ -8,7 +8,6 @@
 LeetCode solution in JavaScript. ✍️
 
 ## 🚀**Getting Start**
-### ❗️Before start don't forget install [nodejs][]
 1. **Clone project**
     ```sh
     $ git clone https://github.com/sky172839465/leetcode-in-js.git
@@ -39,7 +38,7 @@ LeetCode solution in JavaScript. ✍️
 |026|[Remove Duplicates from Sorted Array][]|Easy|[Link](./src/easy/026-remove-duplicates-from-sorted-array.js)|[Link](./__tests__/easy/026-remove-duplicates-from-sorted-array.test.js)|
 |027|[Remove Element][]|Easy|[Link](./src/easy/027-remove-element.js)|[Link](./__tests__/easy/027-remove-element.test.js)|
 |028|[Implement strStr()][]|Easy|[Link](./src/easy/028-implement-strstr.js)|[Link](./__tests__/easy/028-implement-strstr.test.js)|
-
+|035|[Search Insert Position][]|Easy|[Link](./src/easy/035-search-insert-position.js)|[Link](./__tests__/easy/035-search-insert-position.test.js)|
 
 <!-- badges -->
 [travis-image]: https://img.shields.io/travis/sky172839465/leetcode-in-js.svg?branch=master
@@ -54,7 +53,6 @@ LeetCode solution in JavaScript. ✍️
 [javascript-url]: https://zh.wikipedia.org/wiki/JavaScript
 [conventional-commits-image]: https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg
 [conventional-commits-url]: https://conventionalcommits.org
-[nodejs]: https://nodejs.org
 
 <!-- problems -->
 [Two Sum]: https://leetcode.com/problems/two-sum/
@@ -67,3 +65,4 @@ LeetCode solution in JavaScript. ✍️
 [Remove Duplicates from Sorted Array]: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 [Remove Element]: https://leetcode.com/problems/remove-element/
 [Implement strStr()]: https://leetcode.com/problems/implement-strstr/
+[Search Insert Position]: https://leetcode.com/problems/search-insert-position/
