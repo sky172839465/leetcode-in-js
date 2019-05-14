@@ -21,8 +21,7 @@ test('removeDuplicates test case', () => {
   ]
   testCaseList.forEach(({ testValue, expectValue }) => {
     const testCase = testValue
-    const referenceVar = testCase
-    removeDuplicates(referenceVar)
+    removeDuplicates(testCase)
     expect(testCase).toEqual(expectValue)
   })
 })
