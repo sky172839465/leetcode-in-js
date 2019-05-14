@@ -11,6 +11,7 @@ import mergeTwoLists, {
 } from './021-merge-two-sorted-lists'
 import removeDuplicates from './026-remove-duplicates-from-sorted-array'
 import removeElement from './027-remove-element'
+import strStr from './028-implement-strstr'
 
 export {
   twoSum,
@@ -24,5 +25,6 @@ export {
   getFullNodeValues,
   createListNode,
   removeDuplicates,
-  removeElement
+  removeElement,
+  strStr
 }

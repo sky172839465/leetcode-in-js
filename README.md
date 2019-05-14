@@ -38,6 +38,8 @@ LeetCode solution in JavaScript. ✍️
 |021|[Merge Two Sorted Lists][]|Easy|[Link](./src/easy/021-merge-two-sorted-lists.js)|[Link](./__tests__/easy/021-merge-two-sorted-lists.test.js)|
 |026|[Remove Duplicates from Sorted Array][]|Easy|[Link](./src/easy/026-remove-duplicates-from-sorted-array.js)|[Link](./__tests__/easy/026-remove-duplicates-from-sorted-array.test.js)|
 |027|[Remove Element][]|Easy|[Link](./src/easy/027-remove-element.js)|[Link](./__tests__/easy/027-remove-element.test.js)|
+|028|[Implement strStr()][]|Easy|[Link](./src/easy/028-implement-strstr.js)|[Link](./__tests__/easy/028-implement-strstr.test.js)|
+
 
 <!-- badges -->
 [travis-image]: https://img.shields.io/travis/sky172839465/leetcode-in-js.svg?branch=master
@@ -55,12 +57,13 @@ LeetCode solution in JavaScript. ✍️
 [nodejs]: https://nodejs.org
 
 <!-- problems -->
-[Two Sum]: https://leetcode.com/problems/two-sum
-[Reverse Integer]: https://leetcode.com/problems/reverse-integer
-[Palindrome Number]: https://leetcode.com/problems/palindrome-number
-[Roman to Integer]: https://leetcode.com/problems/roman-to-integer
-[Longest Common Prefix]: https://leetcode.com/problems/longest-common-prefix
-[Valid Parentheses]: https://leetcode.com/problems/valid-parentheses
-[Merge Two Sorted Lists]: https://leetcode.com/problems/merge-two-sorted-lists
-[Remove Duplicates from Sorted Array]: https://leetcode.com/problems/remove-duplicates-from-sorted-array
-[Remove Element]: https://leetcode.com/problems/remove-element
+[Two Sum]: https://leetcode.com/problems/two-sum/
+[Reverse Integer]: https://leetcode.com/problems/reverse-integer/
+[Palindrome Number]: https://leetcode.com/problems/palindrome-number/
+[Roman to Integer]: https://leetcode.com/problems/roman-to-integer/
+[Longest Common Prefix]: https://leetcode.com/problems/longest-common-prefix/
+[Valid Parentheses]: https://leetcode.com/problems/valid-parentheses/
+[Merge Two Sorted Lists]: https://leetcode.com/problems/merge-two-sorted-lists/
+[Remove Duplicates from Sorted Array]: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+[Remove Element]: https://leetcode.com/problems/remove-element/
+[Implement strStr()]: https://leetcode.com/problems/implement-strstr/
