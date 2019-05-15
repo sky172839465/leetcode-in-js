@@ -15,6 +15,7 @@ import strStr from './028-implement-strstr'
 import searchInsert from './035-search-insert-position'
 import countAndSay from './038-count-and-say'
 import maxSubArray from './053-maximum-subarray'
+import lengthOfLastWord from './058-length-of-last-word'
 
 export {
   twoSum,
@@ -32,5 +33,6 @@ export {
   strStr,
   searchInsert,
   countAndSay,
-  maxSubArray
+  maxSubArray,
+  lengthOfLastWord
 }
