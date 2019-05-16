@@ -42,6 +42,7 @@ LeetCode solution in JavaScript. ✍️
 |038|[Count and Say][]|Easy|[Link](./src/easy/038-count-and-say.js)|[Link](./__tests__/easy/038-count-and-say.test.js)|
 |053|[Maximum Subarray][]|Easy|[Link](./src/easy/053-maximum-subarray.js)|[Link](./__tests__/easy/053-maximum-subarray.test.js)|
 |058|[Length of Last Word][]|Easy|[Link](./src/easy/058-length-of-last-word.js)|[Link](./__tests__/easy/058-length-of-last-word.test.js)|
+|066|[Plus One][]|Easy|[Link](./src/easy/066-plus-one.js)|[Link](./__tests__/easy/066-plus-one.test.js)|
 
 <!-- badges -->
 [travis-image]: https://img.shields.io/travis/sky172839465/leetcode-in-js.svg?branch=master
@@ -72,3 +73,4 @@ LeetCode solution in JavaScript. ✍️
 [Count and Say]: https://leetcode.com/problems/count-and-say/
 [Maximum Subarray]: https://leetcode.com/problems/maximum-subarray/
 [Length of Last Word]: https://leetcode.com/problems/length-of-last-word/
+[Plus One]: https://leetcode.com/problems/plus-one/
