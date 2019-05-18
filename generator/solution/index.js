@@ -102,6 +102,16 @@ inquirer
         filePath: `__tests__/${difficulty}/${kebabName}.test.js`
       }
     ]
+    const requiredDirs = [
+      `src/${difficulty}`,
+      `__tests__/${difficulty}`
+    ]
+    for (const dir of requiredDirs) {
+      if (!fs.existsSync(dir)) {
+        await executeAction(fs.mkdir, [dir])
+        console.log(color.FgGreen, `[DIR] ${dir} has been created.`)
+      }
+    }
     if (solutionFnName) {
       const solutionContent = getSolutionContent(solutionFnName, solutionArgs)
       const readmeContent = getReadmeContent(`${problemIndex}. ${problemName}`)
@@ -131,13 +141,14 @@ inquirer
     } else {
       const newProblemMapContent = getPrevProblemMapContent(problemMap, problemIndex)
       deleteFolderRecursive(solutionPath)
-      console.log(color.FgRed, `[DIR] ${solutionPath} has been removed.`)
+      console.log(color.FgGreen, `[DIR] ${solutionPath} has been removed.`)
       for (const { key, filePath } of targetFiles) {
         if (key === TARGET_FILE_MAP.TEST) {
           await executeAction(fs.unlink, [filePath])
-          console.log(color.FgRed, `[FILE] ${filePath} has been removed.`)
+          console.log(color.FgGreen, `[FILE] ${filePath} has been removed.`)
         }
       }
       generateFile('generator/problemMap.js', newProblemMapContent)
     }
+    console.log(color.FgWhite, '')
   })
