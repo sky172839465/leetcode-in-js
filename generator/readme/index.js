@@ -87,14 +87,15 @@ const getTableOfContents = (solutions = []) => {
       const [difficulty, index, ...names] = solution.split('-')
       const problemName = problemMap[index] || names.map(name => capitalize(name)).join(' ')
       const kebabName = names.join('-')
+      const kebabNameWithIndexPrefix = `${index}-${kebabName}`
       return [
         '',
         index,
         `[${problemName}](https://leetcode.com/problems/${kebabName})`,
         difficulty,
-        `[Link](./src/easy/${index}-${kebabName}/index.js)`,
-        `[Link](./src/easy/${index}-${kebabName}/README.md)`,
-        `[Link](./__tests__/easy/${kebabName}.test.js)`,
+        `[Link](./src/easy/${kebabNameWithIndexPrefix}/index.js)`,
+        `[Link](./src/easy/${kebabNameWithIndexPrefix}/README.md)`,
+        `[Link](./__tests__/easy/${kebabNameWithIndexPrefix}.test.js)`,
         ''
       ].join('|')
     })
