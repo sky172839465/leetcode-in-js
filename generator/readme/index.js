@@ -109,7 +109,9 @@ const getTableOfContents = (solutions = []) => {
 const difficultyPaths = ['easy', 'medium', 'hard']
 Promise.all(difficultyPaths.map(path => getSolutionsDir(path)))
   .then(respList => {
-    const allSolutions = respList.reduce((total, solutions) => [...total, ...solutions], [])
+    const allSolutions = respList
+      .reduce((total, solutions) => [...total, ...solutions], [])
+      .sort((a, b) => +a.match(/(\d)+/)[0] - +b.match(/(\d)+/)[0])
     const tableOfContents = getTableOfContents(allSolutions)
     const content = [
       titleContent,
