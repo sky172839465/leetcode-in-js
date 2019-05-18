@@ -71,3 +71,4 @@ LeetCode solution in JavaScript. ✍️
 |053|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray)|easy|[Link](./src/easy/053-maximum-subarray/index.js)|[Link](./src/easy/053-maximum-subarray/README.md)|[Link](./__tests__/easy/maximum-subarray.test.js)|
 |058|[Length of Last Word](https://leetcode.com/problems/length-of-last-word)|easy|[Link](./src/easy/058-length-of-last-word/index.js)|[Link](./src/easy/058-length-of-last-word/README.md)|[Link](./__tests__/easy/length-of-last-word.test.js)|
 |066|[Plus One](https://leetcode.com/problems/plus-one)|easy|[Link](./src/easy/066-plus-one/index.js)|[Link](./src/easy/066-plus-one/README.md)|[Link](./__tests__/easy/plus-one.test.js)|
+|067|[Add Binary](https://leetcode.com/problems/add-binary)|easy|[Link](./src/easy/067-add-binary/index.js)|[Link](./src/easy/067-add-binary/README.md)|[Link](./__tests__/easy/add-binary.test.js)|

@@ -17,6 +17,7 @@ import countAndSay from './038-count-and-say'
 import maxSubArray from './053-maximum-subarray'
 import lengthOfLastWord from './058-length-of-last-word'
 import plusOne from './066-plus-one'
+import addBinary from './067-add-binary'
 
 export {
   twoSum,
@@ -36,5 +37,6 @@ export {
   countAndSay,
   maxSubArray,
   lengthOfLastWord,
-  plusOne
+  plusOne,
+  addBinary
 }

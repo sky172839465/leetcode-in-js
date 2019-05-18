@@ -13,7 +13,8 @@ const problemMap = {
   '038': 'Count and Say',
   '053': 'Maximum Subarray',
   '058': 'Length of Last Word',
-  '066': 'Plus One'
+  '066': 'Plus One',
+  '067': 'Add Binary'
 }
 
 module.exports = problemMap
