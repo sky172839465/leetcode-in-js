@@ -1,8 +1,3 @@
-/**
- * 1. 數字判斷正負值
- * 2. 以文字重組數字
- * 3. 乘回原本的正負值取得反轉結果
- */
 const reverse = x => {
   const min = -Math.pow(2, 31)
   const max = Math.pow(2, 31) - 1
