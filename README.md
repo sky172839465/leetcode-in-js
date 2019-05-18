@@ -42,10 +42,16 @@ LeetCode solution in JavaScript. ✍️
     ```sh
     $ npm run solution
     ```
-    Create new solution
-    ![create](https://user-images.githubusercontent.com/9082423/57968538-87b39e00-799e-11e9-84fd-1a0efafe347c.gif)
-    Remove exist solution
-    ![remove](https://user-images.githubusercontent.com/9082423/57968539-87b39e00-799e-11e9-9ef6-d31414fad8bd.gif)
+    <details>
+      <summary>Demo create new solution</summary>
+
+      ![create](https://user-images.githubusercontent.com/9082423/57968538-87b39e00-799e-11e9-84fd-1a0efafe347c.gif)
+    </details>
+    <details>
+    <summary>Demo remove exist solution</summary>
+
+      ![remove](https://user-images.githubusercontent.com/9082423/57968539-87b39e00-799e-11e9-9ef6-d31414fad8bd.gif)
+    </details>
 
 ## 📚**Contents**
 | # | Problem | Difficulty | Solution | Readme | Test Case |
