@@ -22,28 +22,28 @@ const TARGET_FILE_MAP = {
 const DIFFICULTY_QUIZ = {
   type: 'list',
   name: 'difficulty',
-  message: 'Please Choose problem difficulty',
+  message: 'Please Choose problem\'s difficulty',
   choices: ['easy', 'medium', 'hard']
 }
 const PROBLEM_INDEX_QUIZ = {
   type: 'input',
   name: 'problemIndex',
-  message: 'Please input problem index'
+  message: 'Please enter problem\'s index'
 }
 const PROBLEM_NAME_QUIZ = {
   type: 'input',
   name: 'problemName',
-  message: 'Please input problem name'
+  message: 'Please enter problem\'s name'
 }
 const FN_NAME_QUIZ = {
   type: 'input',
   name: 'solutionFnName',
-  message: 'Please input problem solution funtion name'
+  message: 'Please enter solution function\'s name'
 }
 const FN_ARGS_QUIZ = {
   type: 'input',
   name: 'solutionArgs',
-  message: 'Please input problem solution args'
+  message: 'Please enter solution function\'s args'
 }
 const createQuestion = [
   DIFFICULTY_QUIZ,
