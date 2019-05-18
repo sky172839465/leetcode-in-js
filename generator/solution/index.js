@@ -22,7 +22,7 @@ const TARGET_FILE_MAP = {
 const DIFFICULTY_QUIZ = {
   type: 'list',
   name: 'difficulty',
-  message: 'Please Choose problem\'s difficulty',
+  message: 'Please choose problem\'s difficulty',
   choices: ['easy', 'medium', 'hard']
 }
 const PROBLEM_INDEX_QUIZ = {
@@ -62,7 +62,7 @@ inquirer
     {
       type: 'list',
       name: 'action',
-      message: 'Please Choose action',
+      message: 'Please choose action',
       choices: ['create', 'remove']
     }
   ])
