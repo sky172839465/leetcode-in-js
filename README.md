@@ -72,3 +72,4 @@ LeetCode solution in JavaScript. ✍️
 |058|[Length of Last Word](https://leetcode.com/problems/length-of-last-word)|easy|[Link](./src/easy/058-length-of-last-word/index.js)|[Link](./src/easy/058-length-of-last-word/README.md)|[Link](./__tests__/easy/058-length-of-last-word.test.js)|
 |066|[Plus One](https://leetcode.com/problems/plus-one)|easy|[Link](./src/easy/066-plus-one/index.js)|[Link](./src/easy/066-plus-one/README.md)|[Link](./__tests__/easy/066-plus-one.test.js)|
 |067|[Add Binary](https://leetcode.com/problems/add-binary)|easy|[Link](./src/easy/067-add-binary/index.js)|[Link](./src/easy/067-add-binary/README.md)|[Link](./__tests__/easy/067-add-binary.test.js)|
+|069|[Sqrt(x)](https://leetcode.com/problems/sqrtx)|easy|[Link](./src/easy/069-sqrtx/index.js)|[Link](./src/easy/069-sqrtx/README.md)|[Link](./__tests__/easy/069-sqrtx.test.js)|

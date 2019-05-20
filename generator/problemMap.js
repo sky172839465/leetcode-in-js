@@ -14,7 +14,8 @@ const problemMap = {
   '053': 'Maximum Subarray',
   '058': 'Length of Last Word',
   '066': 'Plus One',
-  '067': 'Add Binary'
+  '067': 'Add Binary',
+  '069': 'Sqrt(x)'
 }
 
 module.exports = problemMap
