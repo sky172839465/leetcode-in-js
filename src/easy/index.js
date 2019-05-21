@@ -19,6 +19,7 @@ import lengthOfLastWord from './058-length-of-last-word'
 import plusOne from './066-plus-one'
 import addBinary from './067-add-binary'
 import mySqrt from './069-sqrtx'
+import climbStairs from './070-climbing-stairs'
 
 export {
   twoSum,
@@ -40,5 +41,6 @@ export {
   lengthOfLastWord,
   plusOne,
   addBinary,
-  mySqrt
+  mySqrt,
+  climbStairs
 }

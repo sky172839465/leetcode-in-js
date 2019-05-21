@@ -38,7 +38,7 @@ LeetCode solution in JavaScript. ✍️
     ```sh
     $ npm run test
     ```
-4.  **Solution create / remove**
+4.  **Create / Remove solution**
     ```sh
     $ npm run solution
     ```
@@ -73,3 +73,4 @@ LeetCode solution in JavaScript. ✍️
 |066|[Plus One](https://leetcode.com/problems/plus-one)|easy|[Link](./src/easy/066-plus-one/index.js)|[Link](./src/easy/066-plus-one/README.md)|[Link](./__tests__/easy/066-plus-one.test.js)|
 |067|[Add Binary](https://leetcode.com/problems/add-binary)|easy|[Link](./src/easy/067-add-binary/index.js)|[Link](./src/easy/067-add-binary/README.md)|[Link](./__tests__/easy/067-add-binary.test.js)|
 |069|[Sqrt(x)](https://leetcode.com/problems/sqrtx)|easy|[Link](./src/easy/069-sqrtx/index.js)|[Link](./src/easy/069-sqrtx/README.md)|[Link](./__tests__/easy/069-sqrtx.test.js)|
+|070|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs)|easy|[Link](./src/easy/070-climbing-stairs/index.js)|[Link](./src/easy/070-climbing-stairs/README.md)|[Link](./__tests__/easy/070-climbing-stairs.test.js)|

@@ -15,7 +15,8 @@ const problemMap = {
   '058': 'Length of Last Word',
   '066': 'Plus One',
   '067': 'Add Binary',
-  '069': 'Sqrt(x)'
+  '069': 'Sqrt(x)',
+  '070': 'Climbing Stairs'
 }
 
 module.exports = problemMap
