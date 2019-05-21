@@ -11,8 +11,10 @@ const {
   getSolutionContent,
   getReadmeContent,
   getTestContent,
-  getNewProblemMapContent,
-  getPrevProblemMapContent
+  getNewProblemMap,
+  getPrevProblemMap,
+  getProblemMapContent,
+  getExporterContent
 } = require('./templete')
 const TARGET_FILE_MAP = {
   SOLUTION: 'solution',
@@ -78,7 +80,9 @@ inquirer
       solutionFnName,
       solutionArgs
     } = answer
-    const currentProblemName = problemMap[problemIndex] || problemName
+    const currentProblemName = problemMap[problemIndex]
+      ? problemMap[problemIndex].problemName
+      : problemName
     if (!currentProblemName) {
       console.log(color.FgRed, `Problem index: ${problemIndex} not found.`)
       return
@@ -112,11 +116,21 @@ inquirer
         console.log(color.FgGreen, `[DIR] ${dir} has been created.`)
       }
     }
+    let newProblemMap
     if (solutionFnName) {
       const solutionContent = getSolutionContent(solutionFnName, solutionArgs)
       const readmeContent = getReadmeContent(`${problemIndex}. ${problemName}`)
       const testContent = getTestContent(difficulty, solutionFnName)
-      const newProblemMapContent = getNewProblemMapContent(problemMap, { [problemIndex]: problemName })
+      newProblemMap = getNewProblemMap(problemMap, {
+        [problemIndex]: {
+          difficulty,
+          problemIndex,
+          problemName,
+          solutionFnName,
+          solutionArgs,
+          kebabName
+        }
+      })
       await executeAction(fs.mkdir, [solutionPath])
       console.log(color.FgGreen, `[DIR] ${solutionPath} has been created.`)
       for (const { key, filePath } of targetFiles) {
@@ -137,9 +151,8 @@ inquirer
         generateFile(filePath, content)
         console.log(color.FgGreen, `[FILE] ${filePath} has been created.`)
       }
-      generateFile('generator/problemMap.js', newProblemMapContent)
     } else {
-      const newProblemMapContent = getPrevProblemMapContent(problemMap, problemIndex)
+      newProblemMap = getPrevProblemMap(problemMap, problemIndex)
       deleteFolderRecursive(solutionPath)
       console.log(color.FgGreen, `[DIR] ${solutionPath} has been removed.`)
       for (const { key, filePath } of targetFiles) {
@@ -148,7 +161,12 @@ inquirer
           console.log(color.FgGreen, `[FILE] ${filePath} has been removed.`)
         }
       }
-      generateFile('generator/problemMap.js', newProblemMapContent)
     }
-    console.log(color.FgWhite, '')
+    const problemMapPath = 'generator/problemMap.js'
+    const exporterPath = `src/${difficulty}/index.js`
+    generateFile(problemMapPath, getProblemMapContent(newProblemMap))
+    console.log(color.FgYellow, `[FILE] ${problemMapPath} has been updated.`)
+    generateFile(exporterPath, getExporterContent(newProblemMap, difficulty))
+    console.log(color.FgYellow, `[FILE] ${exporterPath} has been updated.`)
+    console.log('')
   })

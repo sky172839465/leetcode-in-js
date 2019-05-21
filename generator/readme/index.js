@@ -85,7 +85,9 @@ const getTableOfContents = (solutions = []) => {
   const rows = solutions
     .map(solution => {
       const [difficulty, index, ...names] = solution.split('-')
-      const problemName = problemMap[index] || names.map(name => capitalize(name)).join(' ')
+      const problemName = problemMap[index]
+        ? problemMap[index].problemName
+        : names.map(name => capitalize(name)).join(' ')
       const kebabName = names.join('-')
       const kebabNameWithIndexPrefix = `${index}-${kebabName}`
       return [
