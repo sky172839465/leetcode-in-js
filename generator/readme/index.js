@@ -61,7 +61,7 @@ const projectSetupContent = `
     \`\`\`sh
     $ npm run test
     \`\`\`
-4.  **Solution create / remove**
+4.  **Create / Remove solution**
     \`\`\`sh
     $ npm run solution
     \`\`\`
