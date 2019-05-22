@@ -142,6 +142,14 @@ const problemMap = {
     'solutionFnName': 'climbStairs',
     'solutionArgs': 'n',
     'kebabName': '070-climbing-stairs'
+  },
+  '083': {
+    'difficulty': 'easy',
+    'problemIndex': '083',
+    'problemName': 'Remove Duplicates from Sorted List',
+    'solutionFnName': 'deleteDuplicates',
+    'solutionArgs': 'head',
+    'kebabName': '083-remove-duplicates-from-sorted-list'
   }
 }
 

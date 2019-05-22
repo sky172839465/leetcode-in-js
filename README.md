@@ -74,3 +74,4 @@ LeetCode solution in JavaScript. ✍️
 |067|[Add Binary](https://leetcode.com/problems/add-binary)|easy|[Link](./src/easy/067-add-binary/index.js)|[Link](./src/easy/067-add-binary/README.md)|[Link](./__tests__/easy/067-add-binary.test.js)|
 |069|[Sqrt(x)](https://leetcode.com/problems/sqrtx)|easy|[Link](./src/easy/069-sqrtx/index.js)|[Link](./src/easy/069-sqrtx/README.md)|[Link](./__tests__/easy/069-sqrtx.test.js)|
 |070|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs)|easy|[Link](./src/easy/070-climbing-stairs/index.js)|[Link](./src/easy/070-climbing-stairs/README.md)|[Link](./__tests__/easy/070-climbing-stairs.test.js)|
+|083|[Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list)|easy|[Link](./src/easy/083-remove-duplicates-from-sorted-list/index.js)|[Link](./src/easy/083-remove-duplicates-from-sorted-list/README.md)|[Link](./__tests__/easy/083-remove-duplicates-from-sorted-list.test.js)|
