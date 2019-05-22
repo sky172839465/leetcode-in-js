@@ -45,12 +45,12 @@ LeetCode solution in JavaScript. ✍️
     <details>
       <summary>Demo create new solution</summary>
 
-      ![create-solution](https://user-images.githubusercontent.com/9082423/57969769-96a14d00-79ac-11e9-982c-9e59fc2a6e3f.gif)
+      ![create-solution](https://user-images.githubusercontent.com/9082423/58178090-18a8b300-7cd8-11e9-9adb-0ba2af47ca24.gif)
     </details>
     <details>
     <summary>Demo remove exist solution</summary>
 
-      ![remove-solution](https://user-images.githubusercontent.com/9082423/57969768-96a14d00-79ac-11e9-91b3-84fd8dd7dd6d.gif)
+      ![remove-solution](https://user-images.githubusercontent.com/9082423/58178092-19414980-7cd8-11e9-8414-ffa9058fe620.gif)
     </details>
 
 ## 📚**Contents**
