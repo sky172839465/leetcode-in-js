@@ -4,7 +4,7 @@ const {
   info,
   warn,
   error
-} = require('../color')
+} = require('../colorsLog')
 const problemMap = require('../problemMap')
 const {
   generateFile,
@@ -88,7 +88,7 @@ inquirer
       ? problemMap[problemIndex].problemName
       : problemName
     if (!currentProblemName) {
-      console.log(error(`Problem index: ${problemIndex} not found.`))
+      error(`Problem index: ${problemIndex} not found.`)
       return
     }
     const kebabName = `${problemIndex}-` + currentProblemName
@@ -117,7 +117,7 @@ inquirer
     for (const dir of requiredDirs) {
       if (!fs.existsSync(dir)) {
         await executeAction(fs.mkdir, [dir])
-        console.log(info(`[DIR] ${dir} has been created.`))
+        info(`[DIR] ${dir} has been created.`)
       }
     }
     let newProblemMap
@@ -136,7 +136,7 @@ inquirer
         }
       })
       await executeAction(fs.mkdir, [solutionPath])
-      console.log(info(`[DIR] ${solutionPath} has been created.`))
+      info(`[DIR] ${solutionPath} has been created.`)
       for (const { key, filePath } of targetFiles) {
         let content = ''
         switch (key) {
@@ -153,24 +153,23 @@ inquirer
             break
         }
         generateFile(filePath, content)
-        console.log(info(`[FILE] ${filePath} has been created.`))
+        info(`[FILE] ${filePath} has been created.`)
       }
     } else {
       newProblemMap = getPrevProblemMap(problemMap, problemIndex)
       deleteFolderRecursive(solutionPath)
-      console.log(info(`[DIR] ${solutionPath} has been removed.`))
+      info(`[DIR] ${solutionPath} has been removed.`)
       for (const { key, filePath } of targetFiles) {
         if (key === TARGET_FILE_MAP.TEST) {
           await executeAction(fs.unlink, [filePath])
-          console.log(info(`[FILE] ${filePath} has been removed.`))
+          info(`[FILE] ${filePath} has been removed.`)
         }
       }
     }
     const problemMapPath = 'generator/problemMap.js'
     const exporterPath = `src/${difficulty}/index.js`
     generateFile(problemMapPath, getProblemMapContent(newProblemMap))
-    console.log(warn(`[FILE] ${problemMapPath} has been updated.`))
+    warn(`[FILE] ${problemMapPath} has been updated.`)
     generateFile(exporterPath, getExporterContent(newProblemMap, difficulty))
-    console.log(warn(`[FILE] ${exporterPath} has been updated.`))
-    console.log('')
+    warn(`[FILE] ${exporterPath} has been updated.`)
   })

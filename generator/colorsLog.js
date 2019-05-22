@@ -14,7 +14,7 @@ colors.setTheme({
 })
 
 module.exports = {
-  info: colors.info,
-  warn: colors.warn,
-  error: colors.error
+  info: log => console.log(colors.info(log)),
+  warn: log => console.log(colors.warn(log)),
+  error: log => console.log(colors.error(log))
 }
