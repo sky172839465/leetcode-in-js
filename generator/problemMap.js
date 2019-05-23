@@ -150,6 +150,14 @@ const problemMap = {
     'solutionFnName': 'deleteDuplicates',
     'solutionArgs': 'head',
     'kebabName': '083-remove-duplicates-from-sorted-list'
+  },
+  '088': {
+    'difficulty': 'easy',
+    'problemIndex': '088',
+    'problemName': 'Merge Sorted Array',
+    'solutionFnName': 'merge',
+    'solutionArgs': 'nums1, m, nums2, n',
+    'kebabName': '088-merge-sorted-array'
   }
 }
 

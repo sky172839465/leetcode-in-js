@@ -17,6 +17,7 @@ import addBinary from './067-add-binary'
 import mySqrt from './069-sqrtx'
 import climbStairs from './070-climbing-stairs'
 import deleteDuplicates from './083-remove-duplicates-from-sorted-list'
+import merge from './088-merge-sorted-array'
 
 export {
   twoSum,
@@ -37,5 +38,6 @@ export {
   addBinary,
   mySqrt,
   climbStairs,
-  deleteDuplicates
+  deleteDuplicates,
+  merge
 }
