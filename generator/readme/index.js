@@ -3,7 +3,10 @@ const {
   generateFile,
   capitalize
 } = require('../util')
-const { warn } = require('../colorsLog')
+const {
+  colorLog,
+  LEVEL
+} = require('../colorsLog')
 const problemMap = require('../problemMap')
 const badges = require('./badges')
 
@@ -125,5 +128,9 @@ Promise.all(difficultyPaths.map(path => getSolutionsDir(path)))
       ''
     ].join('\n')
     generateFile('README.md', content)
-    warn('[FILE] README.md has been updated.')
+    colorLog({
+      level: LEVEL.WARN,
+      prefix: 'FILE',
+      text: 'README.md has been updated.'
+    })
   })

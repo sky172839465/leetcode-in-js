@@ -1,9 +1,8 @@
 const fs = require('fs')
 const inquirer = require('inquirer')
 const {
-  info,
-  warn,
-  error
+  colorLog,
+  LEVEL
 } = require('../colorsLog')
 const problemMap = require('../problemMap')
 const {
@@ -88,7 +87,10 @@ inquirer
       ? problemMap[problemIndex].problemName
       : problemName
     if (!currentProblemName) {
-      error(`Problem index: ${problemIndex} not found.`)
+      colorLog({
+        level: LEVEL.ERROR,
+        text: `Problem index: ${problemIndex} not found.`
+      })
       return
     }
     const kebabName = `${problemIndex}-` + currentProblemName
@@ -117,7 +119,10 @@ inquirer
     for (const dir of requiredDirs) {
       if (!fs.existsSync(dir)) {
         await executeAction(fs.mkdir, [dir])
-        info(`[DIR] ${dir} has been created.`)
+        colorLog({
+          prefix: 'DIR',
+          text: `${dir} has been created.`
+        })
       }
     }
     let newProblemMap
@@ -136,7 +141,10 @@ inquirer
         }
       })
       await executeAction(fs.mkdir, [solutionPath])
-      info(`[DIR] ${solutionPath} has been created.`)
+      colorLog({
+        prefix: 'DIR',
+        text: `${solutionPath} has been created.`
+      })
       for (const { key, filePath } of targetFiles) {
         let content = ''
         switch (key) {
@@ -153,23 +161,40 @@ inquirer
             break
         }
         generateFile(filePath, content)
-        info(`[FILE] ${filePath} has been created.`)
+        colorLog({
+          prefix: 'FILE',
+          text: `${filePath} has been created.`
+        })
       }
     } else {
       newProblemMap = getPrevProblemMap(problemMap, problemIndex)
       deleteFolderRecursive(solutionPath)
-      info(`[DIR] ${solutionPath} has been removed.`)
+      colorLog({
+        prefix: 'DIR',
+        text: `${solutionPath} has been removed.`
+      })
       for (const { key, filePath } of targetFiles) {
         if (key === TARGET_FILE_MAP.TEST) {
           await executeAction(fs.unlink, [filePath])
-          info(`[FILE] ${filePath} has been removed.`)
+          colorLog({
+            prefix: 'FILE',
+            text: `${filePath} has been removed.`
+          })
         }
       }
     }
     const problemMapPath = 'generator/problemMap.js'
     const exporterPath = `src/${difficulty}/index.js`
     generateFile(problemMapPath, getProblemMapContent(newProblemMap))
-    warn(`[FILE] ${problemMapPath} has been updated.`)
+    colorLog({
+      level: LEVEL.WARN,
+      prefix: 'FILE',
+      text: `${problemMapPath} has been updated.`
+    })
     generateFile(exporterPath, getExporterContent(newProblemMap, difficulty))
-    warn(`[FILE] ${exporterPath} has been updated.`)
+    colorLog({
+      level: LEVEL.WARN,
+      prefix: 'FILE',
+      text: `${exporterPath} has been updated.`
+    })
   })

@@ -1,5 +1,11 @@
 const colors = require('colors')
 
+const LEVEL = {
+  INFO: 'info',
+  WARN: 'warn',
+  ERROR: 'error'
+}
+
 colors.setTheme({
   silly: 'rainbow',
   input: 'grey',
@@ -10,11 +16,29 @@ colors.setTheme({
   help: 'cyan',
   warn: 'yellow',
   debug: 'blue',
-  error: 'red'
+  error: 'red',
+  infoBG: 'bgGreen',
+  warnBG: 'bgYellow',
+  errorBG: 'bgRed'
 })
 
+/**
+ * log message colorful! ️‍🌈
+ */
+const colorLog = ({ level = LEVEL.INFO, prefix = '', text = '' }) => {
+  if (prefix) {
+    console.log(
+      colors[`${level}BG`](
+        colors.black(` ${prefix} `)
+      ),
+      colors[level](text)
+    )
+  } else {
+    console.log(colors[level](text))
+  }
+}
+
 module.exports = {
-  info: log => console.log(colors.info(log)),
-  warn: log => console.log(colors.warn(log)),
-  error: log => console.log(colors.error(log))
+  LEVEL,
+  colorLog
 }
