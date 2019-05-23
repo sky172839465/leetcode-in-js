@@ -1,4 +1,4 @@
-const merge = (nums1 = [], m, nums2 = [], n) => {
+const merge = (nums1, m, nums2, n) => {
   m--
   n--
   for (let i = (m + n + 1); i > -1; i--) {
