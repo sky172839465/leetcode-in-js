@@ -71,12 +71,12 @@ const projectSetupContent = `
     <details>
       <summary>Demo create new solution</summary>
 
-      ![create-solution](https://user-images.githubusercontent.com/9082423/58178090-18a8b300-7cd8-11e9-9adb-0ba2af47ca24.gif)
+      ![create-solution](https://user-images.githubusercontent.com/9082423/58258467-617a6d80-7da5-11e9-8ffc-14b2b3a60772.gif)
     </details>
     <details>
     <summary>Demo remove exist solution</summary>
 
-      ![remove-solution](https://user-images.githubusercontent.com/9082423/58178092-19414980-7cd8-11e9-8414-ffa9058fe620.gif)
+      ![remove-solution](https://user-images.githubusercontent.com/9082423/58258468-617a6d80-7da5-11e9-8261-893f693d52c2.gif)
     </details>
 `
 const getTableOfContents = (solutions = []) => {
