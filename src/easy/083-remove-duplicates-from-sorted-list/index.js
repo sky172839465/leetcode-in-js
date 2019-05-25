@@ -1,4 +1,4 @@
-import { ListNode } from '../../util'
+import ListNode from '../../util/ListNode'
 
 const deleteDuplicates = (head) => {
   if (!head) {

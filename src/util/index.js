@@ -1,9 +1,4 @@
-class ListNode {
-  constructor (val) {
-    this.val = val
-    this.next = null
-  }
-}
+import ListNode from './ListNode'
 
 const getFullNodeValues = listNode => {
   let result = []
