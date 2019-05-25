@@ -19,79 +19,20 @@ const {
   getProblemMapContent,
   getExporterContent
 } = require('./templete')
-const TARGET_FILE_MAP = {
-  SOLUTION: 'solution',
-  README: 'readme',
-  TEST: 'test'
-}
-const DIFFICULTY_QUIZ = {
-  type: 'list',
-  name: 'difficulty',
-  message: 'Please choose problem\'s difficulty',
-  choices: ['easy', 'medium', 'hard']
-}
-const PROBLEM_INDEX_QUIZ = {
-  type: 'input',
-  name: 'problemIndex',
-  message: 'Please enter problem\'s index',
-  validate: input => {
-    const inputStr = `${input}`
-    if (inputStr.length > 4) {
-      return 'Max index is 999'
-    }
-    if (!/\d+$/.test(inputStr)) {
-      return 'Only allow enter number.' + inputStr
-    }
-    return true
-  },
-  transformer: input => {
-    const inputStr = `${input}`
-    if (inputStr.length === 1) {
-      return `00${inputStr}`
-    } else if (inputStr.length === 2) {
-      return `0${inputStr}`
-    }
-    return inputStr
-  }
-}
-const PROBLEM_NAME_QUIZ = {
-  type: 'input',
-  name: 'problemName',
-  message: 'Please enter problem\'s name'
-}
-const FN_NAME_QUIZ = {
-  type: 'input',
-  name: 'solutionFnName',
-  message: 'Please enter solution function\'s name'
-}
-const FN_ARGS_QUIZ = {
-  type: 'input',
-  name: 'solutionArgs',
-  message: 'Please enter solution function\'s args'
-}
-const createQuestion = [
-  DIFFICULTY_QUIZ,
-  PROBLEM_INDEX_QUIZ,
-  PROBLEM_NAME_QUIZ,
-  FN_NAME_QUIZ,
-  FN_ARGS_QUIZ
-]
-const removeQuestion = [
-  DIFFICULTY_QUIZ,
-  PROBLEM_INDEX_QUIZ
-]
+const {
+  ACTION,
+  TARGET_FILE
+} = require('./constants')
+const {
+  ACTION_QUIZ,
+  createQuestion,
+  removeQuestion
+} = require('./questions')
 
 inquirer
-  .prompt([
-    {
-      type: 'list',
-      name: 'action',
-      message: 'Please choose action',
-      choices: ['create', 'remove']
-    }
-  ])
+  .prompt([ACTION_QUIZ])
   .then(({ action }) => {
-    const QUIZ = action === 'create' ? createQuestion : removeQuestion
+    const QUIZ = action === ACTION.CREATE ? createQuestion : removeQuestion
     return inquirer.prompt(QUIZ)
   })
   .then(async (answer) => {
@@ -102,10 +43,14 @@ inquirer
       solutionFnName,
       solutionArgs
     } = answer
-    const currentProblemName = problemMap[problemIndex]
-      ? problemMap[problemIndex].problemName
-      : problemName
-    if (!currentProblemName) {
+    const anwserFromMap = problemMap[problemIndex]
+    let targetProblemName = problemName
+    let targetDifficulty = difficulty
+    if (anwserFromMap) {
+      targetProblemName = anwserFromMap.problemName
+      targetDifficulty = anwserFromMap.difficulty
+    }
+    if (!targetProblemName) {
       colorLog({
         level: LEVEL.ERROR,
         prefix: 'Not Found',
@@ -113,28 +58,28 @@ inquirer
       })
       process.exit()
     }
-    const kebabName = `${problemIndex}-` + currentProblemName
+    const kebabName = `${problemIndex}-` + targetProblemName
       .replace(/\s/g, '-')
       .replace(/[^A-Za-z0-9-]+/g, '')
       .toLowerCase()
-    const solutionPath = `src/${difficulty}/${kebabName}`
+    const solutionPath = `src/${targetDifficulty}/${kebabName}`
     let targetFiles = [
       {
-        key: TARGET_FILE_MAP.SOLUTION,
+        key: TARGET_FILE.SOLUTION,
         filePath: `${solutionPath}/index.js`
       },
       {
-        key: TARGET_FILE_MAP.README,
+        key: TARGET_FILE.README,
         filePath: `${solutionPath}/README.md`
       },
       {
-        key: TARGET_FILE_MAP.TEST,
-        filePath: `__tests__/${difficulty}/${kebabName}.test.js`
+        key: TARGET_FILE.TEST,
+        filePath: `__tests__/${targetDifficulty}/${kebabName}.test.js`
       }
     ]
     const requiredDirs = [
-      `src/${difficulty}`,
-      `__tests__/${difficulty}`
+      `src/${targetDifficulty}`,
+      `__tests__/${targetDifficulty}`
     ]
     for (const dir of requiredDirs) {
       if (!fs.existsSync(dir)) {
@@ -176,13 +121,13 @@ inquirer
       for (const { key, filePath } of targetFiles) {
         let content = ''
         switch (key) {
-          case TARGET_FILE_MAP.SOLUTION:
+          case TARGET_FILE.SOLUTION:
             content = solutionContent
             break
-          case TARGET_FILE_MAP.README:
+          case TARGET_FILE.README:
             content = readmeContent
             break
-          case TARGET_FILE_MAP.TEST:
+          case TARGET_FILE.TEST:
             content = testContent
             break
           default:
@@ -202,7 +147,7 @@ inquirer
         text: `${solutionPath} has been removed.`
       })
       for (const { key, filePath } of targetFiles) {
-        if (key === TARGET_FILE_MAP.TEST) {
+        if (key === TARGET_FILE.TEST) {
           await executeAction(fs.unlink, [filePath])
           colorLog({
             prefix: 'FILE',
@@ -212,14 +157,14 @@ inquirer
       }
     }
     const problemMapPath = 'generator/problemMap.js'
-    const exporterPath = `src/${difficulty}/index.js`
+    const exporterPath = `src/${targetDifficulty}/index.js`
     generateFile(problemMapPath, getProblemMapContent(newProblemMap))
     colorLog({
       level: LEVEL.WARN,
       prefix: 'FILE',
       text: `${problemMapPath} has been updated.`
     })
-    generateFile(exporterPath, getExporterContent(newProblemMap, difficulty))
+    generateFile(exporterPath, getExporterContent(newProblemMap, targetDifficulty))
     colorLog({
       level: LEVEL.WARN,
       prefix: 'FILE',
