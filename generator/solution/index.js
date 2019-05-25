@@ -225,4 +225,11 @@ inquirer
       prefix: 'FILE',
       text: `${exporterPath} has been updated.`
     })
+    require('child_process').exec('npm run update-readme', (err, stdout) => {
+      if (err) {
+        console.log(err)
+      } else {
+        console.log(stdout)
+      }
+    })
   })
