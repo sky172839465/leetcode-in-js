@@ -1,9 +1,7 @@
 const fs = require('fs')
 
 const generateFile = (path, content) => {
-  fs.writeFile(path, content, 'utf8', err => {
-    if (err) throw err
-  })
+  return executeAction(fs.writeFile, [path, content, 'utf8'])
 }
 
 const capitalize = str => {
@@ -13,7 +11,10 @@ const capitalize = str => {
 const executeAction = (action, args) => {
   return new Promise(resolve => {
     action(...args, err => {
-      if (err) throw err
+      if (err) {
+        console.log(err)
+        process.exit()
+      }
       resolve()
     })
   })

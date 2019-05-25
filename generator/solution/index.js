@@ -33,7 +33,26 @@ const DIFFICULTY_QUIZ = {
 const PROBLEM_INDEX_QUIZ = {
   type: 'input',
   name: 'problemIndex',
-  message: 'Please enter problem\'s index'
+  message: 'Please enter problem\'s index',
+  validate: input => {
+    const inputStr = `${input}`
+    if (inputStr.length > 4) {
+      return 'Max index is 999'
+    }
+    if (!/\d+$/.test(inputStr)) {
+      return 'Only allow enter number.' + inputStr
+    }
+    return true
+  },
+  transformer: input => {
+    const inputStr = `${input}`
+    if (inputStr.length === 1) {
+      return `00${inputStr}`
+    } else if (inputStr.length === 2) {
+      return `0${inputStr}`
+    }
+    return inputStr
+  }
 }
 const PROBLEM_NAME_QUIZ = {
   type: 'input',
@@ -89,9 +108,10 @@ inquirer
     if (!currentProblemName) {
       colorLog({
         level: LEVEL.ERROR,
-        text: `Problem index: ${problemIndex} not found.`
+        prefix: 'Not Found',
+        text: `Problem index: ${problemIndex}`
       })
-      return
+      process.exit()
     }
     const kebabName = `${problemIndex}-` + currentProblemName
       .replace(/\s/g, '-')
@@ -140,6 +160,14 @@ inquirer
           kebabName
         }
       })
+      if (fs.existsSync(solutionPath)) {
+        colorLog({
+          level: LEVEL.ERROR,
+          prefix: 'DIR',
+          text: `${solutionPath} already exist!`
+        })
+        process.exit()
+      }
       await executeAction(fs.mkdir, [solutionPath])
       colorLog({
         prefix: 'DIR',
