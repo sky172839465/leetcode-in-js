@@ -1,7 +1,8 @@
 const {
   ACTION,
-  DIFFICULTY
-} = require('./constants')
+  DIFFICULTY,
+  QUIZ_TYPE
+} = require('../constants')
 
 const MESSAGE = {
   MAX_LENGTH: 'This field is over max length.',
@@ -20,21 +21,21 @@ const validate = {
 const isValid = messages => messages.find(msg => msg.length > 0) || true
 
 const ACTION_QUIZ = {
-  type: 'list',
+  type: QUIZ_TYPE.LIST,
   name: 'action',
   message: 'Please choose action',
   choices: [ACTION.CREATE, ACTION.REMOVE]
 }
 
 const DIFFICULTY_QUIZ = {
-  type: 'list',
+  type: QUIZ_TYPE.LIST,
   name: 'difficulty',
   message: 'Please choose problem\'s difficulty',
   choices: [DIFFICULTY.EASY, DIFFICULTY.MEDIUM, DIFFICULTY.HARD]
 }
 
 const PROBLEM_INDEX_QUIZ = {
-  type: 'input',
+  type: QUIZ_TYPE.INPUT,
   name: 'problemIndex',
   message: 'Please enter problem\'s index',
   validate: input => isValid([
@@ -45,7 +46,7 @@ const PROBLEM_INDEX_QUIZ = {
 }
 
 const PROBLEM_NAME_QUIZ = {
-  type: 'input',
+  type: QUIZ_TYPE.INPUT,
   name: 'problemName',
   message: 'Please enter problem\'s name',
   validate: input => isValid([
@@ -55,7 +56,7 @@ const PROBLEM_NAME_QUIZ = {
 }
 
 const FN_NAME_QUIZ = {
-  type: 'input',
+  type: QUIZ_TYPE.INPUT,
   name: 'solutionFnName',
   message: 'Please enter solution function\'s name',
   validate: input => isValid([
@@ -65,7 +66,7 @@ const FN_NAME_QUIZ = {
 }
 
 const FN_ARGS_QUIZ = {
-  type: 'input',
+  type: QUIZ_TYPE.INPUT,
   name: 'solutionArgs',
   message: 'Please enter solution function\'s args',
   validate: input => isValid([

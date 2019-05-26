@@ -11,6 +11,11 @@ const {
   deleteFolderRecursive
 } = require('../util')
 const {
+  ACTION,
+  TARGET_FILE,
+  PREFIX
+} = require('../constants')
+const {
   getSolutionContent,
   getReadmeContent,
   getTestContent,
@@ -19,10 +24,6 @@ const {
   getProblemMapContent,
   getExporterContent
 } = require('./templete')
-const {
-  ACTION,
-  TARGET_FILE
-} = require('./constants')
 const {
   ACTION_QUIZ,
   createQuestion,
@@ -53,7 +54,7 @@ inquirer
     if (!targetProblemName) {
       colorLog({
         level: LEVEL.ERROR,
-        prefix: 'Not Found',
+        prefix: PREFIX.NOT_FOUND,
         text: `Problem index: ${problemIndex}`
       })
       process.exit()
@@ -85,7 +86,7 @@ inquirer
       if (!fs.existsSync(dir)) {
         await executeAction(fs.mkdir, [dir])
         colorLog({
-          prefix: 'DIR',
+          prefix: PREFIX.DIR,
           text: `${dir} has been created.`
         })
       }
@@ -108,14 +109,14 @@ inquirer
       if (fs.existsSync(solutionPath)) {
         colorLog({
           level: LEVEL.ERROR,
-          prefix: 'DIR',
+          prefix: PREFIX.DIR,
           text: `${solutionPath} already exist!`
         })
         process.exit()
       }
       await executeAction(fs.mkdir, [solutionPath])
       colorLog({
-        prefix: 'DIR',
+        prefix: PREFIX.DIR,
         text: `${solutionPath} has been created.`
       })
       for (const { key, filePath } of targetFiles) {
@@ -135,7 +136,7 @@ inquirer
         }
         generateFile(filePath, content)
         colorLog({
-          prefix: 'FILE',
+          prefix: PREFIX.FILE,
           text: `${filePath} has been created.`
         })
       }
@@ -143,14 +144,14 @@ inquirer
       newProblemMap = getPrevProblemMap(problemMap, problemIndex)
       deleteFolderRecursive(solutionPath)
       colorLog({
-        prefix: 'DIR',
+        prefix: PREFIX.DIR,
         text: `${solutionPath} has been removed.`
       })
       for (const { key, filePath } of targetFiles) {
         if (key === TARGET_FILE.TEST) {
           await executeAction(fs.unlink, [filePath])
           colorLog({
-            prefix: 'FILE',
+            prefix: PREFIX.FILE,
             text: `${filePath} has been removed.`
           })
         }
@@ -161,13 +162,13 @@ inquirer
     generateFile(problemMapPath, getProblemMapContent(newProblemMap))
     colorLog({
       level: LEVEL.WARN,
-      prefix: 'FILE',
+      prefix: PREFIX.FILE,
       text: `${problemMapPath} has been updated.`
     })
     generateFile(exporterPath, getExporterContent(newProblemMap, targetDifficulty))
     colorLog({
       level: LEVEL.WARN,
-      prefix: 'FILE',
+      prefix: PREFIX.FILE,
       text: `${exporterPath} has been updated.`
     })
     require('child_process').exec('npm run update-readme', (err, stdout) => {
