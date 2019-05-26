@@ -1,7 +1,8 @@
-# LeetCode [![Written by javaScript][javascript-image]][javascript-url]
-
+# LeetCode  [![Written by javaScript][javascript-image]][javascript-url] [![LeetCode coverage][leetcode-image]][leetcode-url]
 [javascript-image]: https://img.shields.io/badge/Language-JavaScript-yellow.svg
 [javascript-url]: https://zh.wikipedia.org/wiki/JavaScript
+[leetcode-image]: https://leetcode-badge.chyroc.cn/?name=sky172839465&leetcode_badge_style=Solved/Total-{{.solved_question}}/{{.all_question}}-green.svg
+[leetcode-url]: https://leetcode.com/sky172839465
 
 [![Build Status][travis-image]][travis-url]
 [![Coverage Status][codecov-image]][codecov-url]
