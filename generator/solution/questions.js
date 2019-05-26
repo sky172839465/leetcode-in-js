@@ -3,19 +3,22 @@ const {
   DIFFICULTY,
   QUIZ_TYPE
 } = require('../constants')
+const problemMap = require('../problemMap')
 
 const MESSAGE = {
   MAX_LENGTH: 'This field is over max length.',
   REQUIRED: 'This field is required.',
   NUMBER_ONLY: 'This field only allow number.',
-  START_WITH_ENGLISH: 'This field should start with English.'
+  START_WITH_ENGLISH: 'This field should start with English.',
+  EXIST: 'This problem\'s index has been created.'
 }
 
 const validate = {
   required: input => `${input}` ? '' : MESSAGE.REQUIRED,
   maxLength: (input, size) => (`${input}`.length <= size) ? '' : MESSAGE.MAX_LENGTH,
   numberOnly: input => /^[\d]+$/.test(`${input}`) ? '' : MESSAGE.NUMBER_ONLY,
-  startWithEnglish: input => /^[a-zA-Z]/.test(`${input}`) ? '' : MESSAGE.START_WITH_ENGLISH
+  startWithEnglish: input => /^[a-zA-Z]/.test(`${input}`) ? '' : MESSAGE.START_WITH_ENGLISH,
+  exist: input => !(input in problemMap) ? '' : MESSAGE.EXIST
 }
 
 const isValid = messages => messages.find(msg => msg.length > 0) || true
@@ -31,7 +34,11 @@ const DIFFICULTY_QUIZ = {
   type: QUIZ_TYPE.LIST,
   name: 'difficulty',
   message: 'Please choose problem\'s difficulty',
-  choices: [DIFFICULTY.EASY, DIFFICULTY.MEDIUM, DIFFICULTY.HARD]
+  choices: [
+    DIFFICULTY.EASY,
+    DIFFICULTY.MEDIUM,
+    DIFFICULTY.HARD
+  ]
 }
 
 const PROBLEM_INDEX_QUIZ = {
@@ -41,6 +48,7 @@ const PROBLEM_INDEX_QUIZ = {
   validate: input => isValid([
     validate.required(input),
     validate.numberOnly(input),
+    validate.exist(input),
     validate.maxLength(input, 3)
   ])
 }
