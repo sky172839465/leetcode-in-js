@@ -1,3 +1,4 @@
+import isSameTree from './100-same-tree'
 import twoSum from './001-two-sum'
 import reverse from './007-reverse-integer'
 import isPalindrome from './009-palindrome-number'
@@ -20,6 +21,7 @@ import deleteDuplicates from './083-remove-duplicates-from-sorted-list'
 import merge from './088-merge-sorted-array'
 
 export {
+  isSameTree,
   twoSum,
   reverse,
   isPalindrome,

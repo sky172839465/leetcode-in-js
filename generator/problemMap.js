@@ -1,4 +1,12 @@
 const problemMap = {
+  '100': {
+    'difficulty': 'easy',
+    'problemIndex': '100',
+    'problemName': 'Same Tree',
+    'solutionFnName': 'isSameTree',
+    'solutionArgs': 'p, q',
+    'kebabName': '100-same-tree'
+  },
   '001': {
     'difficulty': 'easy',
     'problemIndex': '001',

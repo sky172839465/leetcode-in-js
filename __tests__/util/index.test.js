@@ -1,6 +1,7 @@
 import {
   createListNode,
-  getFullNodeValues
+  getFullNodeValues,
+  createTreeNode
 } from '../../src/util'
 import ListNode from '../../src/util/ListNode'
 
@@ -18,4 +19,23 @@ test('getFullNodeValues test case', () => {
   const existListNode = createListNode([1, 2, 3])
   expect(getFullNodeValues(emptyListNode)).toEqual([])
   expect(getFullNodeValues(existListNode)).toEqual([1, 2, 3])
+})
+
+test('createTreeNode test case', () => {
+  expect(createTreeNode([])).toEqual(undefined)
+  expect(createTreeNode([1])).toEqual({ val: 1, left: null, right: null })
+  expect(createTreeNode([1, 2, 3])).toEqual({
+    val: 1,
+    left: { val: 2, left: null, right: null },
+    right: { val: 3, left: null, right: null }
+  })
+  expect(createTreeNode([1, null, 3, null, null, 6, 7])).toEqual({
+    val: 1,
+    left: null,
+    right: {
+      val: 3,
+      left: { val: 6, left: null, right: null },
+      right: { val: 7, left: null, right: null }
+    }
+  })
 })
