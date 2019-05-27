@@ -10,7 +10,8 @@ const MESSAGE = {
   REQUIRED: 'This field is required.',
   NUMBER_ONLY: 'This field only allow number.',
   START_WITH_ENGLISH: 'This field should start with English.',
-  EXIST: 'This problem\'s index has been created.'
+  MAP_EXIST: 'This problem\'s index has been created.',
+  MAP_EMPTY: 'This problem\'s index hasn\'t been created.'
 }
 
 const validate = {
@@ -18,7 +19,8 @@ const validate = {
   length: (input, size) => (`${input}`.length === size) ? '' : `${MESSAGE.LENGTH} ${size} numbers.`,
   numberOnly: input => /^[\d]+$/.test(`${input}`) ? '' : MESSAGE.NUMBER_ONLY,
   startWithEnglish: input => /^[a-zA-Z]/.test(`${input}`) ? '' : MESSAGE.START_WITH_ENGLISH,
-  exist: input => !(input in problemMap) ? '' : MESSAGE.EXIST
+  mapExist: input => !(input in problemMap) ? '' : MESSAGE.MAP_EXIST,
+  mapEmpty: input => (input in problemMap) ? '' : MESSAGE.MAP_EMPTY
 }
 
 const isValid = messages => messages.find(msg => msg.length > 0) || true
@@ -41,16 +43,20 @@ const DIFFICULTY_QUIZ = {
   ]
 }
 
-const PROBLEM_INDEX_QUIZ = {
-  type: QUIZ_TYPE.INPUT,
-  name: 'problemIndex',
-  message: 'Please enter problem\'s index',
-  validate: input => isValid([
-    validate.required(input),
-    validate.numberOnly(input),
-    validate.exist(input),
-    validate.length(input, 4)
-  ])
+const getProblemIndexQuiz = action => {
+  return {
+    type: QUIZ_TYPE.INPUT,
+    name: 'problemIndex',
+    message: 'Please enter problem\'s index',
+    validate: input => isValid([
+      validate.required(input),
+      validate.numberOnly(input),
+      action === ACTION.CREATE
+        ? validate.mapExist(input)
+        : validate.mapEmpty(input),
+      validate.length(input, 4)
+    ])
+  }
 }
 
 const PROBLEM_NAME_QUIZ = {
@@ -85,14 +91,14 @@ const FN_ARGS_QUIZ = {
 
 const createQuestion = [
   DIFFICULTY_QUIZ,
-  PROBLEM_INDEX_QUIZ,
+  getProblemIndexQuiz(ACTION.CREATE),
   PROBLEM_NAME_QUIZ,
   FN_NAME_QUIZ,
   FN_ARGS_QUIZ
 ]
 
 const removeQuestion = [
-  PROBLEM_INDEX_QUIZ
+  getProblemIndexQuiz(ACTION.REMOVE)
 ]
 
 module.exports = {
