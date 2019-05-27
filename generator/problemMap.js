@@ -1,15 +1,23 @@
 const problemMap = {
   '100': {
     'difficulty': 'easy',
-    'problemIndex': '100',
+    'problemIndex': '0100',
     'problemName': 'Same Tree',
     'solutionFnName': 'isSameTree',
     'solutionArgs': 'p, q',
     'kebabName': '100-same-tree'
   },
+  '101': {
+    'difficulty': 'easy',
+    'problemIndex': '0101',
+    'problemName': 'Symmetric Tree',
+    'solutionFnName': 'isSymmetric',
+    'solutionArgs': 'root',
+    'kebabName': '101-symmetric-tree'
+  },
   '001': {
     'difficulty': 'easy',
-    'problemIndex': '001',
+    'problemIndex': '0001',
     'problemName': 'Two Sum',
     'solutionFnName': 'twoSum',
     'solutionArgs': 'nums',
@@ -17,7 +25,7 @@ const problemMap = {
   },
   '007': {
     'difficulty': 'easy',
-    'problemIndex': '007',
+    'problemIndex': '0007',
     'problemName': 'Reverse Integer',
     'solutionFnName': 'reverse',
     'solutionArgs': 'x',
@@ -25,7 +33,7 @@ const problemMap = {
   },
   '009': {
     'difficulty': 'easy',
-    'problemIndex': '009',
+    'problemIndex': '0009',
     'problemName': 'Palindrome Number',
     'solutionFnName': 'isPalindrome',
     'solutionArgs': 'x',
@@ -33,7 +41,7 @@ const problemMap = {
   },
   '013': {
     'difficulty': 'easy',
-    'problemIndex': '013',
+    'problemIndex': '0013',
     'problemName': 'Roman to Integer',
     'solutionFnName': 'romanToInt',
     'solutionArgs': 's',
@@ -41,7 +49,7 @@ const problemMap = {
   },
   '014': {
     'difficulty': 'easy',
-    'problemIndex': '014',
+    'problemIndex': '0014',
     'problemName': 'Longest Common Prefix',
     'solutionFnName': 'longestCommonPrefix',
     'solutionArgs': 'strs',
@@ -49,7 +57,7 @@ const problemMap = {
   },
   '020': {
     'difficulty': 'easy',
-    'problemIndex': '020',
+    'problemIndex': '0020',
     'problemName': 'Valid Parentheses',
     'solutionFnName': 'isValid',
     'solutionArgs': 's',
@@ -57,7 +65,7 @@ const problemMap = {
   },
   '021': {
     'difficulty': 'easy',
-    'problemIndex': '021',
+    'problemIndex': '0021',
     'problemName': 'Merge Two Sorted Lists',
     'solutionFnName': 'mergeTwoLists',
     'solutionArgs': 'l1, l2',
@@ -65,7 +73,7 @@ const problemMap = {
   },
   '026': {
     'difficulty': 'easy',
-    'problemIndex': '026',
+    'problemIndex': '0026',
     'problemName': 'Remove Duplicates from Sorted Array',
     'solutionFnName': 'removeDuplicates',
     'solutionArgs': 'nums',
@@ -73,7 +81,7 @@ const problemMap = {
   },
   '027': {
     'difficulty': 'easy',
-    'problemIndex': '027',
+    'problemIndex': '0027',
     'problemName': 'Remove Element',
     'solutionFnName': 'removeElement',
     'solutionArgs': 'nums, val',
@@ -81,7 +89,7 @@ const problemMap = {
   },
   '028': {
     'difficulty': 'easy',
-    'problemIndex': '028',
+    'problemIndex': '0028',
     'problemName': 'Implement strStr()',
     'solutionFnName': 'strStr',
     'solutionArgs': 'haystack, needle',
@@ -89,7 +97,7 @@ const problemMap = {
   },
   '035': {
     'difficulty': 'easy',
-    'problemIndex': '035',
+    'problemIndex': '0035',
     'problemName': 'Search Insert Position',
     'solutionFnName': 'searchInsert',
     'solutionArgs': 'nums, target',
@@ -97,7 +105,7 @@ const problemMap = {
   },
   '038': {
     'difficulty': 'easy',
-    'problemIndex': '038',
+    'problemIndex': '0038',
     'problemName': 'Count and Say',
     'solutionFnName': 'countAndSay',
     'solutionArgs': 'n',
@@ -105,7 +113,7 @@ const problemMap = {
   },
   '053': {
     'difficulty': 'easy',
-    'problemIndex': '053',
+    'problemIndex': '0053',
     'problemName': 'Maximum Subarray',
     'solutionFnName': 'maxSubArray',
     'solutionArgs': 'nums',
@@ -113,7 +121,7 @@ const problemMap = {
   },
   '058': {
     'difficulty': 'easy',
-    'problemIndex': '058',
+    'problemIndex': '0058',
     'problemName': 'Length of Last Word',
     'solutionFnName': 'lengthOfLastWord',
     'solutionArgs': 's',
@@ -121,7 +129,7 @@ const problemMap = {
   },
   '066': {
     'difficulty': 'easy',
-    'problemIndex': '066',
+    'problemIndex': '0066',
     'problemName': 'Plus One',
     'solutionFnName': 'plusOne',
     'solutionArgs': 'digits',
@@ -129,7 +137,7 @@ const problemMap = {
   },
   '067': {
     'difficulty': 'easy',
-    'problemIndex': '067',
+    'problemIndex': '0067',
     'problemName': 'Add Binary',
     'solutionFnName': 'addBinary',
     'solutionArgs': 'a, b',
@@ -137,7 +145,7 @@ const problemMap = {
   },
   '069': {
     'difficulty': 'easy',
-    'problemIndex': '069',
+    'problemIndex': '0069',
     'problemName': 'Sqrt(x)',
     'solutionFnName': 'mySqrt',
     'solutionArgs': 'x',
@@ -145,7 +153,7 @@ const problemMap = {
   },
   '070': {
     'difficulty': 'easy',
-    'problemIndex': '070',
+    'problemIndex': '0070',
     'problemName': 'Climbing Stairs',
     'solutionFnName': 'climbStairs',
     'solutionArgs': 'n',
@@ -153,7 +161,7 @@ const problemMap = {
   },
   '083': {
     'difficulty': 'easy',
-    'problemIndex': '083',
+    'problemIndex': '0083',
     'problemName': 'Remove Duplicates from Sorted List',
     'solutionFnName': 'deleteDuplicates',
     'solutionArgs': 'head',
@@ -161,7 +169,7 @@ const problemMap = {
   },
   '088': {
     'difficulty': 'easy',
-    'problemIndex': '088',
+    'problemIndex': '0088',
     'problemName': 'Merge Sorted Array',
     'solutionFnName': 'merge',
     'solutionArgs': 'nums1, m, nums2, n',

@@ -6,7 +6,7 @@ const {
 const problemMap = require('../problemMap')
 
 const MESSAGE = {
-  MAX_LENGTH: 'This field is over max length.',
+  LENGTH: 'This field should have',
   REQUIRED: 'This field is required.',
   NUMBER_ONLY: 'This field only allow number.',
   START_WITH_ENGLISH: 'This field should start with English.',
@@ -15,7 +15,7 @@ const MESSAGE = {
 
 const validate = {
   required: input => `${input}` ? '' : MESSAGE.REQUIRED,
-  maxLength: (input, size) => (`${input}`.length <= size) ? '' : MESSAGE.MAX_LENGTH,
+  length: (input, size) => (`${input}`.length === size) ? '' : `${MESSAGE.LENGTH} ${size} numbers.`,
   numberOnly: input => /^[\d]+$/.test(`${input}`) ? '' : MESSAGE.NUMBER_ONLY,
   startWithEnglish: input => /^[a-zA-Z]/.test(`${input}`) ? '' : MESSAGE.START_WITH_ENGLISH,
   exist: input => !(input in problemMap) ? '' : MESSAGE.EXIST
@@ -49,7 +49,7 @@ const PROBLEM_INDEX_QUIZ = {
     validate.required(input),
     validate.numberOnly(input),
     validate.exist(input),
-    validate.maxLength(input, 3)
+    validate.length(input, 4)
   ])
 }
 
