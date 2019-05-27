@@ -91,9 +91,9 @@ const getTableOfContents = (solutions = []) => {
         index,
         `[${problemName}](https://leetcode.com/problems/${kebabName})`,
         difficulty,
-        `[Link](./src/easy/${kebabNameWithIndexPrefix}/index.js)`,
-        `[Link](./src/easy/${kebabNameWithIndexPrefix}/README.md)`,
-        `[Link](./__tests__/easy/${kebabNameWithIndexPrefix}.test.js)`,
+        `[Solution](./src/easy/${kebabNameWithIndexPrefix}/index.js)`,
+        `[Readme](./src/easy/${kebabNameWithIndexPrefix}/README.md)`,
+        `[Test Case](./__tests__/easy/${kebabNameWithIndexPrefix}.test.js)`,
         ''
       ].join('|')
     })
