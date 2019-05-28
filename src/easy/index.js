@@ -20,6 +20,7 @@ import mySqrt from './0069-sqrtx'
 import climbStairs from './0070-climbing-stairs'
 import deleteDuplicates from './0083-remove-duplicates-from-sorted-list'
 import merge from './0088-merge-sorted-array'
+import maxDepth from './0104-maximum-depth-of-binary-tree'
 
 export {
   isSameTree,
@@ -43,5 +44,6 @@ export {
   mySqrt,
   climbStairs,
   deleteDuplicates,
-  merge
+  merge,
+  maxDepth
 }

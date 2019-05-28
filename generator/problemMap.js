@@ -174,6 +174,14 @@ const problemMap = {
     'solutionFnName': 'merge',
     'solutionArgs': 'nums1, m, nums2, n',
     'kebabName': '0088-merge-sorted-array'
+  },
+  '0104': {
+    'difficulty': 'easy',
+    'problemIndex': '0104',
+    'problemName': 'Maximum Depth of Binary Tree',
+    'solutionFnName': 'maxDepth',
+    'solutionArgs': 'root',
+    'kebabName': '0104-maximum-depth-of-binary-tree'
   }
 }
 
