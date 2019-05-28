@@ -18,7 +18,8 @@ const TARGET_FILE = {
 const PREFIX = {
   DIR: 'DIR',
   FILE: 'FILE',
-  NOT_FOUND: 'NOT FOUND'
+  NOT_FOUND: 'NOT FOUND',
+  UNEXPECT_ERROR: 'Unexpect Error'
 }
 
 const QUIZ_TYPE = {

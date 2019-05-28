@@ -1,5 +1,8 @@
 const fs = require('fs')
-const { generateFile } = require('../util')
+const {
+  generateFile,
+  handleError
+} = require('../util')
 const {
   colorLog,
   LEVEL
@@ -33,23 +36,26 @@ const difficultyPaths = [
   DIFFICULTY.MEDIUM,
   DIFFICULTY.HARD
 ]
-Promise.all(difficultyPaths.map(path => getSolutionsDir(path)))
-  .then(respList => {
-    const allSolutions = respList
-      .reduce((total, solutions) => [...total, ...solutions], [])
-      .sort((a, b) => +a.match(/(\d)+/)[0] - +b.match(/(\d)+/)[0])
-    const content = [
-      getTitleContent(),
-      getBadgesContent(),
-      getDescriptionContent(),
-      getProjectSetupContent(),
-      getTableOfContents(allSolutions),
-      ''
-    ].join('\n')
-    generateFile('README.md', content)
-    colorLog({
-      level: LEVEL.WARN,
-      prefix: PREFIX.FILE,
-      text: 'README.md has been updated.'
-    })
+
+const readme = async () => {
+  const respList = await Promise.all(difficultyPaths.map(path => getSolutionsDir(path)))
+  const allSolutions = respList
+    .reduce((total, solutions) => [...total, ...solutions], [])
+    .sort((a, b) => +a.match(/(\d)+/)[0] - +b.match(/(\d)+/)[0])
+  const content = [
+    getTitleContent(),
+    getBadgesContent(),
+    getDescriptionContent(),
+    getProjectSetupContent(),
+    getTableOfContents(allSolutions),
+    ''
+  ].join('\n')
+  generateFile('README.md', content)
+  colorLog({
+    level: LEVEL.WARN,
+    prefix: PREFIX.FILE,
+    text: 'README.md has been updated.'
   })
+}
+
+handleError(readme)

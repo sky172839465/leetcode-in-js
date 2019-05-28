@@ -1,4 +1,9 @@
 const fs = require('fs')
+const {
+  colorLog,
+  LEVEL
+} = require('./colorsLog')
+const { PREFIX } = require('./constants')
 
 const generateFile = (path, content) => {
   return executeAction(fs.writeFile, [path, content, 'utf8'])
@@ -35,9 +40,22 @@ const deleteFolderRecursive = path => {
   }
 }
 
+const handleError = (action, args = []) => {
+  try {
+    action(...args)
+  } catch (error) {
+    colorLog({
+      level: LEVEL.ERROR,
+      prefix: PREFIX.UNEXPECT_ERROR,
+      text: error.message
+    })
+  }
+}
+
 module.exports = {
   generateFile,
   capitalize,
   executeAction,
-  deleteFolderRecursive
+  deleteFolderRecursive,
+  handleError
 }
