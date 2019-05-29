@@ -21,6 +21,7 @@ import climbStairs from './0070-climbing-stairs'
 import deleteDuplicates from './0083-remove-duplicates-from-sorted-list'
 import merge from './0088-merge-sorted-array'
 import maxDepth from './0104-maximum-depth-of-binary-tree'
+import levelOrderBottom from './0107-binary-tree-level-order-traversal-ii'
 
 export {
   isSameTree,
@@ -45,5 +46,6 @@ export {
   climbStairs,
   deleteDuplicates,
   merge,
-  maxDepth
+  maxDepth,
+  levelOrderBottom
 }
