@@ -40,7 +40,7 @@ const createTreeNode = list => {
     list = list.slice(0, Math.pow(2, i - 1) - 1)
     if (treeNodes.length > 0) {
       treeNodes = currentLayerNodeVals.map((val, index) => {
-        if (!val) {
+        if (!val && val !== 0) {
           return val
         }
         let newTreeNode = new TreeNode(val)
@@ -51,7 +51,7 @@ const createTreeNode = list => {
         return newTreeNode
       })
     } else {
-      treeNodes = currentLayerNodeVals.map(val => val ? new TreeNode(val) : val)
+      treeNodes = currentLayerNodeVals.map(val => (val || val === 0) ? new TreeNode(val) : val)
     }
   }
   return treeNodes[0]
