@@ -22,6 +22,7 @@ import deleteDuplicates from './0083-remove-duplicates-from-sorted-list'
 import merge from './0088-merge-sorted-array'
 import maxDepth from './0104-maximum-depth-of-binary-tree'
 import levelOrderBottom from './0107-binary-tree-level-order-traversal-ii'
+import sortedArrayToBST from './0108-convert-sorted-array-to-binary-search-tree'
 
 export {
   isSameTree,
@@ -47,5 +48,6 @@ export {
   deleteDuplicates,
   merge,
   maxDepth,
-  levelOrderBottom
+  levelOrderBottom,
+  sortedArrayToBST
 }

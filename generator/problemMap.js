@@ -190,6 +190,14 @@ const problemMap = {
     'solutionFnName': 'levelOrderBottom',
     'solutionArgs': 'root',
     'kebabName': '0107-binary-tree-level-order-traversal-ii'
+  },
+  '0108': {
+    'difficulty': 'easy',
+    'problemIndex': '0108',
+    'problemName': 'Convert Sorted Array to Binary Search Tree',
+    'solutionFnName': 'sortedArrayToBST',
+    'solutionArgs': 'nums',
+    'kebabName': '0108-convert-sorted-array-to-binary-search-tree'
   }
 }
 
