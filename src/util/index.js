@@ -29,32 +29,43 @@ const createListNode = list => {
   return listNode
 }
 
-const createTreeNode = list => {
-  if (list.length === 0) {
+const createTreeNode = nums => {
+  if (nums.length === 0) {
     return undefined
   }
-  const layer = Math.floor(Math.log2(list.length)) + 1
-  let treeNodes = []
-  for (let i = layer; i > 0; i--) {
-    const currentLayerNodeVals = list.slice(Math.pow(2, i - 1) - 1)
-    list = list.slice(0, Math.pow(2, i - 1) - 1)
-    if (treeNodes.length > 0) {
-      treeNodes = currentLayerNodeVals.map((val, index) => {
-        if (!val && val !== 0) {
-          return val
-        }
-        let newTreeNode = new TreeNode(val)
-        const childPosition = index * 2
-        const [leftNode, rightNode] = treeNodes.slice(childPosition, childPosition + 2)
-        leftNode && (newTreeNode.left = leftNode)
-        rightNode && (newTreeNode.right = rightNode)
-        return newTreeNode
-      })
-    } else {
-      treeNodes = currentLayerNodeVals.map(val => (val || val === 0) ? new TreeNode(val) : val)
-    }
+  const SIDE = {
+    LEFT: 'left',
+    RIGHT: 'right'
   }
-  return treeNodes[0]
+  // 紀錄目前處理過左右二元樹的節點數量
+  let DEPTH_MAP = {
+    [SIDE.LEFT]: {},
+    [SIDE.RIGHT]: {}
+  }
+  const getTreeNode = (depth, side) => {
+    if (depth in DEPTH_MAP[side]) {
+      DEPTH_MAP[side][depth] += 1
+    } else {
+      // 右二元樹起點需要扣掉左二元樹的數量
+      DEPTH_MAP[side][depth] = side === SIDE.LEFT ? -1 : depth - 1
+    }
+    const currentPosition = DEPTH_MAP[side][depth]
+    // NODE位置為 2^ 階層 + 從 -1 開始的順位
+    const nodeValue = nums[Math.pow(2, depth) + currentPosition]
+
+    if (!nodeValue && nodeValue !== 0) {
+      return null
+    }
+    const nextDepth = depth + 1
+    let treeNode = new TreeNode(nodeValue)
+    treeNode.left = getTreeNode(nextDepth, side)
+    treeNode.right = getTreeNode(nextDepth, side)
+    return treeNode
+  }
+  let root = new TreeNode(nums[0])
+  root.left = getTreeNode(1, SIDE.LEFT)
+  root.right = getTreeNode(1, SIDE.RIGHT)
+  return root
 }
 
 export {
