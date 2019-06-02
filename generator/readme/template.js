@@ -63,12 +63,12 @@ const getProjectSetupContent = () => `
     <details>
       <summary>Demo create new solution</summary>
 
-      ![create-solution](https://user-images.githubusercontent.com/9082423/58258467-617a6d80-7da5-11e9-8ffc-14b2b3a60772.gif)
+      ![create-solution](https://user-images.githubusercontent.com/9082423/58757240-7391a400-853b-11e9-9716-f2d13b286fbf.gif)
     </details>
     <details>
     <summary>Demo remove exist solution</summary>
 
-      ![remove-solution](https://user-images.githubusercontent.com/9082423/58258468-617a6d80-7da5-11e9-8261-893f693d52c2.gif)
+      ![remove-solution](https://user-images.githubusercontent.com/9082423/58757241-742a3a80-853b-11e9-873e-e1bc0feb6a8c.gif)
     </details>
 `
 
