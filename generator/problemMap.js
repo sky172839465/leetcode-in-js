@@ -198,6 +198,14 @@ const problemMap = {
     'solutionFnName': 'sortedArrayToBST',
     'solutionArgs': 'nums',
     'kebabName': '0108-convert-sorted-array-to-binary-search-tree'
+  },
+  '0111': {
+    'difficulty': 'easy',
+    'problemIndex': '0111',
+    'problemName': 'Minimum Depth of Binary Tree',
+    'solutionFnName': 'minDepth',
+    'solutionArgs': 'root',
+    'kebabName': '0111-minimum-depth-of-binary-tree'
   }
 }
 
