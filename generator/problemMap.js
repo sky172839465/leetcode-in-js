@@ -206,6 +206,14 @@ const problemMap = {
     'solutionFnName': 'minDepth',
     'solutionArgs': 'root',
     'kebabName': '0111-minimum-depth-of-binary-tree'
+  },
+  '0112': {
+    'difficulty': 'easy',
+    'problemIndex': '0112',
+    'problemName': 'Path Sum',
+    'solutionFnName': 'hasPathSum',
+    'solutionArgs': 'root, sum',
+    'kebabName': '0112-path-sum'
   }
 }
 

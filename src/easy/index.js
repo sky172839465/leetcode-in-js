@@ -24,6 +24,7 @@ import maxDepth from './0104-maximum-depth-of-binary-tree'
 import levelOrderBottom from './0107-binary-tree-level-order-traversal-ii'
 import sortedArrayToBST from './0108-convert-sorted-array-to-binary-search-tree'
 import minDepth from './0111-minimum-depth-of-binary-tree'
+import hasPathSum from './0112-path-sum'
 
 export {
   isSameTree,
@@ -51,5 +52,6 @@ export {
   maxDepth,
   levelOrderBottom,
   sortedArrayToBST,
-  minDepth
+  minDepth,
+  hasPathSum
 }
