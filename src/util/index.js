@@ -31,7 +31,7 @@ const createListNode = list => {
 
 const createTreeNode = nums => {
   if (nums.length === 0) {
-    return undefined
+    return null
   }
   const SIDE = {
     LEFT: 'left',

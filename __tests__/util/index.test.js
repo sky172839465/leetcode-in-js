@@ -22,7 +22,7 @@ test('getFullNodeValues test case', () => {
 })
 
 test('createTreeNode test case', () => {
-  expect(createTreeNode([])).toEqual(undefined)
+  expect(createTreeNode([])).toEqual(null)
   expect(createTreeNode([0])).toEqual({ val: 0, left: null, right: null })
   expect(createTreeNode([1])).toEqual({ val: 1, left: null, right: null })
   expect(createTreeNode([1, 2, 3])).toEqual({
