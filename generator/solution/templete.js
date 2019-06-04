@@ -19,7 +19,9 @@ const getReadmeContent = title =>
 `
 
 const getProblemMapContent = problemMap => {
-  const rows = JSON.stringify(problemMap, null, 2).replace(/"/g, '\'')
+  const rows = JSON.stringify(problemMap, null, 2)
+    .replace(/'/g, '\\\'')
+    .replace(/"/g, '\'')
   return [
     `const problemMap = ${rows}`,
     '',
