@@ -214,6 +214,14 @@ const problemMap = {
     'solutionFnName': 'hasPathSum',
     'solutionArgs': 'root, sum',
     'kebabName': '0112-path-sum'
+  },
+  '0118': {
+    'difficulty': 'easy',
+    'problemIndex': '0118',
+    'problemName': 'Pascal\'s Triangle',
+    'solutionFnName': 'generate',
+    'solutionArgs': 'numRows',
+    'kebabName': '0118-pascals-triangle'
   }
 }
 
