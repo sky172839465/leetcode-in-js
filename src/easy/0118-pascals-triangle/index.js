@@ -7,7 +7,7 @@ const generate = numRows => {
     const prevRow = result[i - 1]
     result[i] = [1]
     for (let j = 0; j < i; j++) {
-      const [leftNode = 0, rightNode = 0] = [prevRow[j], prevRow[j + 1]]
+      const [leftNode, rightNode = 0] = [prevRow[j], prevRow[j + 1]]
       result[i][j + 1] = leftNode + rightNode
     }
   }
