@@ -63,7 +63,7 @@ const solved = async () => {
   })
   const cmds = [
     'git add .',
-    `git commit -m "feat: add ${problemIndex} ${problemName} by 🤖"`
+    `git commit -m "feat: add ${+problemIndex}. ${problemName} by 🤖"`
   ]
   for (const cmd of cmds) {
     await executeAction(childProcess.exec, [cmd])
