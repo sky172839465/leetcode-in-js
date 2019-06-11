@@ -63,7 +63,7 @@ const solved = async () => {
   })
   const cmds = [
     'git add .',
-    `git commit -m "feat: add ${problemIndex} ${problemName}"`
+    `git commit -m "feat: add ${problemIndex} ${problemName} by 🤖"`
   ]
   for (const cmd of cmds) {
     await executeAction(childProcess.exec, [cmd])
@@ -85,7 +85,7 @@ const solved = async () => {
     colorLog({
       level: LEVEL.INFO,
       prefix: PREFIX.GIT,
-      text: 'success push to GitHub 🤖'
+      text: 'success push to GitHub ✅'
     })
   }
 }
