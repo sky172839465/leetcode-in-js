@@ -10,6 +10,7 @@
     "lintfix": "standard --fix",
     "update-readme": "node generator/readme",
     "solution": "node generator/solution",
+    "solved": "node generator/solved",
     "ci-lint": "if npm run lint; then echo '💯 Lint perfect'; else echo '⁉️ Lint get error please run `npm run lint` check again';exit 1; fi",
     "ci-test": "if npm run test::coverage; then echo '✅ Unit test run success'; else echo '❌ Unit test run failure'; exit 1; fi"
   },

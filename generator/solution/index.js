@@ -14,7 +14,8 @@ const {
 const {
   ACTION,
   TARGET_FILE,
-  PREFIX
+  PREFIX,
+  PATH
 } = require('../constants')
 const {
   getSolutionContent,
@@ -100,7 +101,8 @@ const solution = async () => {
         problemName,
         solutionFnName,
         solutionArgs,
-        kebabName
+        kebabName,
+        solved: false
       }
     })
     if (fs.existsSync(solutionPath)) {
@@ -154,13 +156,12 @@ const solution = async () => {
       }
     }
   }
-  const problemMapPath = 'generator/problemMap.js'
   const exporterPath = `src/${targetDifficulty}/index.js`
-  generateFile(problemMapPath, getProblemMapContent(newProblemMap))
+  generateFile(PATH.PROBLEM_MAP, getProblemMapContent(newProblemMap))
   colorLog({
     level: LEVEL.WARN,
     prefix: PREFIX.FILE,
-    text: `${problemMapPath} has been updated.`
+    text: `${PATH.PROBLEM_MAP} has been updated.`
   })
   generateFile(exporterPath, getExporterContent(newProblemMap, targetDifficulty))
   colorLog({
@@ -168,13 +169,8 @@ const solution = async () => {
     prefix: PREFIX.FILE,
     text: `${exporterPath} has been updated.`
   })
-  require('child_process').exec('npm run update-readme', (err, stdout) => {
-    if (err) {
-      console.log(err)
-    } else {
-      console.log(stdout)
-    }
-  })
+  const updateResult = await executeAction(require('child_process').exec, 'npm run update-readme')
+  console.log(updateResult)
 }
 
 handleError(solution)

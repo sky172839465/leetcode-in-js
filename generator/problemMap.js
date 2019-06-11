@@ -5,7 +5,8 @@ const problemMap = {
     'problemName': 'Same Tree',
     'solutionFnName': 'isSameTree',
     'solutionArgs': 'p, q',
-    'kebabName': '0100-same-tree'
+    'kebabName': '0100-same-tree',
+    'solved': true
   },
   '0101': {
     'difficulty': 'easy',
@@ -13,7 +14,8 @@ const problemMap = {
     'problemName': 'Symmetric Tree',
     'solutionFnName': 'isSymmetric',
     'solutionArgs': 'root',
-    'kebabName': '0101-symmetric-tree'
+    'kebabName': '0101-symmetric-tree',
+    'solved': true
   },
   '0001': {
     'difficulty': 'easy',
@@ -21,7 +23,8 @@ const problemMap = {
     'problemName': 'Two Sum',
     'solutionFnName': 'twoSum',
     'solutionArgs': 'nums',
-    'kebabName': '0001-two-sum'
+    'kebabName': '0001-two-sum',
+    'solved': true
   },
   '0007': {
     'difficulty': 'easy',
@@ -29,7 +32,8 @@ const problemMap = {
     'problemName': 'Reverse Integer',
     'solutionFnName': 'reverse',
     'solutionArgs': 'x',
-    'kebabName': '0007-reverse-integer'
+    'kebabName': '0007-reverse-integer',
+    'solved': true
   },
   '0009': {
     'difficulty': 'easy',
@@ -37,7 +41,8 @@ const problemMap = {
     'problemName': 'Palindrome Number',
     'solutionFnName': 'isPalindrome',
     'solutionArgs': 'x',
-    'kebabName': '0009-palindrome-number'
+    'kebabName': '0009-palindrome-number',
+    'solved': true
   },
   '0013': {
     'difficulty': 'easy',
@@ -45,7 +50,8 @@ const problemMap = {
     'problemName': 'Roman to Integer',
     'solutionFnName': 'romanToInt',
     'solutionArgs': 's',
-    'kebabName': '0013-roman-to-integer'
+    'kebabName': '0013-roman-to-integer',
+    'solved': true
   },
   '0014': {
     'difficulty': 'easy',
@@ -53,7 +59,8 @@ const problemMap = {
     'problemName': 'Longest Common Prefix',
     'solutionFnName': 'longestCommonPrefix',
     'solutionArgs': 'strs',
-    'kebabName': '0014-longest-common-prefix'
+    'kebabName': '0014-longest-common-prefix',
+    'solved': true
   },
   '0020': {
     'difficulty': 'easy',
@@ -61,7 +68,8 @@ const problemMap = {
     'problemName': 'Valid Parentheses',
     'solutionFnName': 'isValid',
     'solutionArgs': 's',
-    'kebabName': '0020-valid-parentheses'
+    'kebabName': '0020-valid-parentheses',
+    'solved': true
   },
   '0021': {
     'difficulty': 'easy',
@@ -69,7 +77,8 @@ const problemMap = {
     'problemName': 'Merge Two Sorted Lists',
     'solutionFnName': 'mergeTwoLists',
     'solutionArgs': 'l1, l2',
-    'kebabName': '0021-merge-two-sorted-lists'
+    'kebabName': '0021-merge-two-sorted-lists',
+    'solved': true
   },
   '0026': {
     'difficulty': 'easy',
@@ -77,7 +86,8 @@ const problemMap = {
     'problemName': 'Remove Duplicates from Sorted Array',
     'solutionFnName': 'removeDuplicates',
     'solutionArgs': 'nums',
-    'kebabName': '0026-remove-duplicates-from-sorted-array'
+    'kebabName': '0026-remove-duplicates-from-sorted-array',
+    'solved': true
   },
   '0027': {
     'difficulty': 'easy',
@@ -85,7 +95,8 @@ const problemMap = {
     'problemName': 'Remove Element',
     'solutionFnName': 'removeElement',
     'solutionArgs': 'nums, val',
-    'kebabName': '0027-remove-element'
+    'kebabName': '0027-remove-element',
+    'solved': true
   },
   '0028': {
     'difficulty': 'easy',
@@ -93,7 +104,8 @@ const problemMap = {
     'problemName': 'Implement strStr()',
     'solutionFnName': 'strStr',
     'solutionArgs': 'haystack, needle',
-    'kebabName': '0028-implement-strstr'
+    'kebabName': '0028-implement-strstr',
+    'solved': true
   },
   '0035': {
     'difficulty': 'easy',
@@ -101,7 +113,8 @@ const problemMap = {
     'problemName': 'Search Insert Position',
     'solutionFnName': 'searchInsert',
     'solutionArgs': 'nums, target',
-    'kebabName': '0035-search-insert-position'
+    'kebabName': '0035-search-insert-position',
+    'solved': true
   },
   '0038': {
     'difficulty': 'easy',
@@ -109,7 +122,8 @@ const problemMap = {
     'problemName': 'Count and Say',
     'solutionFnName': 'countAndSay',
     'solutionArgs': 'n',
-    'kebabName': '0038-count-and-say'
+    'kebabName': '0038-count-and-say',
+    'solved': true
   },
   '0053': {
     'difficulty': 'easy',
@@ -117,7 +131,8 @@ const problemMap = {
     'problemName': 'Maximum Subarray',
     'solutionFnName': 'maxSubArray',
     'solutionArgs': 'nums',
-    'kebabName': '0053-maximum-subarray'
+    'kebabName': '0053-maximum-subarray',
+    'solved': true
   },
   '0058': {
     'difficulty': 'easy',
@@ -125,7 +140,8 @@ const problemMap = {
     'problemName': 'Length of Last Word',
     'solutionFnName': 'lengthOfLastWord',
     'solutionArgs': 's',
-    'kebabName': '0058-length-of-last-word'
+    'kebabName': '0058-length-of-last-word',
+    'solved': true
   },
   '0066': {
     'difficulty': 'easy',
@@ -133,7 +149,8 @@ const problemMap = {
     'problemName': 'Plus One',
     'solutionFnName': 'plusOne',
     'solutionArgs': 'digits',
-    'kebabName': '0066-plus-one'
+    'kebabName': '0066-plus-one',
+    'solved': true
   },
   '0067': {
     'difficulty': 'easy',
@@ -141,7 +158,8 @@ const problemMap = {
     'problemName': 'Add Binary',
     'solutionFnName': 'addBinary',
     'solutionArgs': 'a, b',
-    'kebabName': '0067-add-binary'
+    'kebabName': '0067-add-binary',
+    'solved': true
   },
   '0069': {
     'difficulty': 'easy',
@@ -149,7 +167,8 @@ const problemMap = {
     'problemName': 'Sqrt(x)',
     'solutionFnName': 'mySqrt',
     'solutionArgs': 'x',
-    'kebabName': '0069-sqrtx'
+    'kebabName': '0069-sqrtx',
+    'solved': true
   },
   '0070': {
     'difficulty': 'easy',
@@ -157,7 +176,8 @@ const problemMap = {
     'problemName': 'Climbing Stairs',
     'solutionFnName': 'climbStairs',
     'solutionArgs': 'n',
-    'kebabName': '0070-climbing-stairs'
+    'kebabName': '0070-climbing-stairs',
+    'solved': true
   },
   '0083': {
     'difficulty': 'easy',
@@ -165,7 +185,8 @@ const problemMap = {
     'problemName': 'Remove Duplicates from Sorted List',
     'solutionFnName': 'deleteDuplicates',
     'solutionArgs': 'head',
-    'kebabName': '0083-remove-duplicates-from-sorted-list'
+    'kebabName': '0083-remove-duplicates-from-sorted-list',
+    'solved': true
   },
   '0088': {
     'difficulty': 'easy',
@@ -173,7 +194,8 @@ const problemMap = {
     'problemName': 'Merge Sorted Array',
     'solutionFnName': 'merge',
     'solutionArgs': 'nums1, m, nums2, n',
-    'kebabName': '0088-merge-sorted-array'
+    'kebabName': '0088-merge-sorted-array',
+    'solved': true
   },
   '0104': {
     'difficulty': 'easy',
@@ -181,7 +203,8 @@ const problemMap = {
     'problemName': 'Maximum Depth of Binary Tree',
     'solutionFnName': 'maxDepth',
     'solutionArgs': 'root',
-    'kebabName': '0104-maximum-depth-of-binary-tree'
+    'kebabName': '0104-maximum-depth-of-binary-tree',
+    'solved': true
   },
   '0107': {
     'difficulty': 'easy',
@@ -189,7 +212,8 @@ const problemMap = {
     'problemName': 'Binary Tree Level Order Traversal II',
     'solutionFnName': 'levelOrderBottom',
     'solutionArgs': 'root',
-    'kebabName': '0107-binary-tree-level-order-traversal-ii'
+    'kebabName': '0107-binary-tree-level-order-traversal-ii',
+    'solved': true
   },
   '0108': {
     'difficulty': 'easy',
@@ -197,7 +221,8 @@ const problemMap = {
     'problemName': 'Convert Sorted Array to Binary Search Tree',
     'solutionFnName': 'sortedArrayToBST',
     'solutionArgs': 'nums',
-    'kebabName': '0108-convert-sorted-array-to-binary-search-tree'
+    'kebabName': '0108-convert-sorted-array-to-binary-search-tree',
+    'solved': true
   },
   '0111': {
     'difficulty': 'easy',
@@ -205,7 +230,8 @@ const problemMap = {
     'problemName': 'Minimum Depth of Binary Tree',
     'solutionFnName': 'minDepth',
     'solutionArgs': 'root',
-    'kebabName': '0111-minimum-depth-of-binary-tree'
+    'kebabName': '0111-minimum-depth-of-binary-tree',
+    'solved': true
   },
   '0112': {
     'difficulty': 'easy',
@@ -213,7 +239,8 @@ const problemMap = {
     'problemName': 'Path Sum',
     'solutionFnName': 'hasPathSum',
     'solutionArgs': 'root, sum',
-    'kebabName': '0112-path-sum'
+    'kebabName': '0112-path-sum',
+    'solved': true
   },
   '0118': {
     'difficulty': 'easy',
@@ -221,7 +248,8 @@ const problemMap = {
     'problemName': 'Pascal\'s Triangle',
     'solutionFnName': 'generate',
     'solutionArgs': 'numRows',
-    'kebabName': '0118-pascals-triangle'
+    'kebabName': '0118-pascals-triangle',
+    'solved': true
   }
 }
 

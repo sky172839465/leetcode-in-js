@@ -19,7 +19,9 @@ const PREFIX = {
   DIR: 'DIR',
   FILE: 'FILE',
   NOT_FOUND: 'NOT FOUND',
-  UNEXPECT_ERROR: 'Unexpect Error'
+  UNEXPECT_ERROR: 'Unexpect Error',
+  SOLVED: 'Solved',
+  GIT: 'Git'
 }
 
 const QUIZ_TYPE = {
@@ -34,10 +36,15 @@ const QUIZ_TYPE = {
   EDITOR: 'editor'
 }
 
+const PATH = {
+  PROBLEM_MAP: 'generator/problemMap.js'
+}
+
 module.exports = {
   ACTION,
   DIFFICULTY,
   TARGET_FILE,
   PREFIX,
-  QUIZ_TYPE
+  QUIZ_TYPE,
+  PATH
 }

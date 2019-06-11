@@ -13,14 +13,14 @@ const capitalize = str => {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }
 
-const executeAction = (action, args) => {
+const executeAction = (action, args = []) => {
   return new Promise(resolve => {
-    action(...args, err => {
+    action(...args, (err, res) => {
       if (err) {
         console.log(err)
         process.exit()
       }
-      resolve()
+      resolve(res)
     })
   })
 }
