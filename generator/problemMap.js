@@ -248,7 +248,15 @@ const problemMap = {
     'problemName': 'Pascal\'s Triangle',
     'solutionFnName': 'generate',
     'solutionArgs': 'numRows',
-    'kebabName': '0118-pascals-triangle',
+    'kebabName': '0118-pascals-triangle'
+  },
+  '0119': {
+    'difficulty': 'easy',
+    'problemIndex': '0119',
+    'problemName': 'Pascal\'s Triangle II',
+    'solutionFnName': 'getRow',
+    'solutionArgs': 'rowIndex',
+    'kebabName': '0119-pascals-triangle-ii',
     'solved': true
   }
 }
