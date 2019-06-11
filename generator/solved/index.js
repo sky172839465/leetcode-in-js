@@ -50,8 +50,10 @@ const solved = async () => {
     return
   }
   const newProblemMap = getNewProblemMap(problemMap, {
-    ...problem,
-    solved: true
+    [problemIndex]: {
+      ...problem,
+      solved: true
+    }
   })
   generateFile(PATH.PROBLEM_MAP, getProblemMapContent(newProblemMap))
   colorLog({
