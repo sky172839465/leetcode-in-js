@@ -27,12 +27,13 @@ const ACCEPT_QUIZ = {
 }
 
 const solved = async () => {
-  const problem = problemMap[process.argv[2]]
+  const enterProblemIndex = process.argv[2]
+  const problem = problemMap[enterProblemIndex]
   if (!problem) {
     colorLog({
       level: LEVEL.ERROR,
       prefix: PREFIX.NOT_FOUND,
-      text: 'Problem hasn\'t been created.'
+      text: `ProblemIndex: ${enterProblemIndex} hasn't been created.`
     })
     return
   }
