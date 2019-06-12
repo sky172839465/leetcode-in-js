@@ -169,7 +169,7 @@ const solution = async () => {
     prefix: PREFIX.FILE,
     text: `${exporterPath} has been updated.`
   })
-  const updateResult = await executeAction(require('child_process').exec, 'npm run update-readme')
+  const updateResult = await executeAction(require('child_process').exec, ['npm run update-readme'])
   console.log(updateResult)
 }
 
