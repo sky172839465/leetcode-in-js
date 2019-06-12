@@ -258,6 +258,15 @@ const problemMap = {
     'solutionArgs': 'rowIndex',
     'kebabName': '0119-pascals-triangle-ii',
     'solved': true
+  },
+  '0121': {
+    'difficulty': 'easy',
+    'problemIndex': '0121',
+    'problemName': 'Best Time to Buy and Sell Stock',
+    'solutionFnName': 'maxProfit',
+    'solutionArgs': 'prices',
+    'kebabName': '0121-best-time-to-buy-and-sell-stock',
+    'solved': true
   }
 }
 

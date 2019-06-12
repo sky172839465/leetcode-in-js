@@ -27,6 +27,7 @@ import minDepth from './0111-minimum-depth-of-binary-tree'
 import hasPathSum from './0112-path-sum'
 import generate from './0118-pascals-triangle'
 import getRow from './0119-pascals-triangle-ii'
+import maxProfit from './0121-best-time-to-buy-and-sell-stock'
 
 export {
   isSameTree,
@@ -57,5 +58,6 @@ export {
   minDepth,
   hasPathSum,
   generate,
-  getRow
+  getRow,
+  maxProfit
 }
