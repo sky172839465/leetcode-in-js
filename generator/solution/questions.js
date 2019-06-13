@@ -1,7 +1,8 @@
 const {
   ACTION,
   DIFFICULTY,
-  QUIZ_TYPE
+  QUIZ_TYPE,
+  FILE_MANIPULATE
 } = require('../constants')
 const problemMap = require('../problemMap')
 
@@ -10,8 +11,8 @@ const MESSAGE = {
   REQUIRED: 'This field is required.',
   NUMBER_ONLY: 'This field only allow number.',
   START_WITH_ENGLISH: 'This field should start with English.',
-  MAP_EXIST: 'This problem\'s index has been created.',
-  MAP_EMPTY: 'This problem\'s index hasn\'t been created.'
+  MAP_EXIST: `This problem's index ${FILE_MANIPULATE.NOT_CREATED}.`,
+  MAP_EMPTY: `This problem's index ${FILE_MANIPULATE.NOT_CREATED}.`
 }
 
 const validate = {
