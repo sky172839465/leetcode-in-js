@@ -13,7 +13,8 @@ const {
 const {
   PREFIX,
   QUIZ_TYPE,
-  PATH
+  PATH,
+  FILE_MANIPULATE
 } = require('../constants')
 const {
   getNewProblemMap,
@@ -33,7 +34,7 @@ const solved = async () => {
     colorLog({
       level: LEVEL.ERROR,
       prefix: PREFIX.NOT_FOUND,
-      text: `ProblemIndex: ${enterProblemIndex} hasn't been created.`
+      text: `ProblemIndex: ${enterProblemIndex} ${FILE_MANIPULATE.NOT_CREATED}.`
     })
     return
   }
@@ -60,7 +61,7 @@ const solved = async () => {
   colorLog({
     level: LEVEL.WARN,
     prefix: PREFIX.FILE,
-    text: `${PATH.PROBLEM_MAP} has been updated.`
+    text: `${PATH.PROBLEM_MAP} ${FILE_MANIPULATE.UPDATED}.`
   })
   const cmds = [
     'git add .',

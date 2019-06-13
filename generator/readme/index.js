@@ -9,7 +9,9 @@ const {
 } = require('../colorsLog')
 const {
   DIFFICULTY,
-  PREFIX
+  PREFIX,
+  FILE_MANIPULATE,
+  PATH
 } = require('../constants')
 const {
   getTitleContent,
@@ -50,11 +52,11 @@ const readme = async () => {
     getTableOfContents(allSolutions),
     ''
   ].join('\n')
-  generateFile('README.md', content)
+  generateFile(PATH.README, content)
   colorLog({
     level: LEVEL.WARN,
     prefix: PREFIX.FILE,
-    text: 'README.md has been updated.'
+    text: `${PATH.README} ${FILE_MANIPULATE.UPDATED}.`
   })
 }
 

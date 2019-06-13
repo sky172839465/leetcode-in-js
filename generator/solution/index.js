@@ -15,7 +15,8 @@ const {
   ACTION,
   TARGET_FILE,
   PREFIX,
-  PATH
+  PATH,
+  FILE_MANIPULATE
 } = require('../constants')
 const {
   getSolutionContent,
@@ -85,7 +86,7 @@ const solution = async () => {
       await executeAction(fs.mkdir, [dir])
       colorLog({
         prefix: PREFIX.DIR,
-        text: `${dir} has been created.`
+        text: `${dir} ${FILE_MANIPULATE.CREATED}.`
       })
     }
   }
@@ -116,7 +117,7 @@ const solution = async () => {
     await executeAction(fs.mkdir, [solutionPath])
     colorLog({
       prefix: PREFIX.DIR,
-      text: `${solutionPath} has been created.`
+      text: `${solutionPath} ${FILE_MANIPULATE.CREATED}.`
     })
     for (const { key, filePath } of targetFiles) {
       let content = ''
@@ -136,7 +137,7 @@ const solution = async () => {
       generateFile(filePath, content)
       colorLog({
         prefix: PREFIX.FILE,
-        text: `${filePath} has been created.`
+        text: `${filePath} ${FILE_MANIPULATE.CREATED}.`
       })
     }
   } else {
@@ -144,14 +145,14 @@ const solution = async () => {
     deleteFolderRecursive(solutionPath)
     colorLog({
       prefix: PREFIX.DIR,
-      text: `${solutionPath} has been removed.`
+      text: `${solutionPath} ${FILE_MANIPULATE.DELETED}.`
     })
     for (const { key, filePath } of targetFiles) {
       if (key === TARGET_FILE.TEST) {
         await executeAction(fs.unlink, [filePath])
         colorLog({
           prefix: PREFIX.FILE,
-          text: `${filePath} has been removed.`
+          text: `${filePath} ${FILE_MANIPULATE.DELETED}.`
         })
       }
     }
@@ -161,13 +162,13 @@ const solution = async () => {
   colorLog({
     level: LEVEL.WARN,
     prefix: PREFIX.FILE,
-    text: `${PATH.PROBLEM_MAP} has been updated.`
+    text: `${PATH.PROBLEM_MAP} ${FILE_MANIPULATE.UPDATED}.`
   })
   generateFile(exporterPath, getExporterContent(newProblemMap, targetDifficulty))
   colorLog({
     level: LEVEL.WARN,
     prefix: PREFIX.FILE,
-    text: `${exporterPath} has been updated.`
+    text: `${exporterPath} ${FILE_MANIPULATE.UPDATED}.`
   })
   const updateResult = await executeAction(require('child_process').exec, ['npm run update-readme'])
   console.log(updateResult)

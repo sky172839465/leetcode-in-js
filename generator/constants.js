@@ -37,7 +37,21 @@ const QUIZ_TYPE = {
 }
 
 const PATH = {
-  PROBLEM_MAP: 'generator/problemMap.js'
+  PROBLEM_MAP: 'generator/problemMap.js',
+  README: 'README.md'
+}
+
+const FILE_MANIPULATED_PREFIX = 'has been'
+
+const FILE_UNMANIPULATED_PREFIX = 'has\'t been'
+
+const FILE_MANIPULATE = {
+  UPDATED: `${FILE_MANIPULATED_PREFIX} updated.`,
+  CREATED: `${FILE_MANIPULATED_PREFIX} created.`,
+  DELETED: `${FILE_MANIPULATED_PREFIX} deleted.`,
+  NOT_UPDATED: `${FILE_UNMANIPULATED_PREFIX} updated.`,
+  NOT_CREATED: `${FILE_UNMANIPULATED_PREFIX} created.`,
+  NOT_DELETED: `${FILE_UNMANIPULATED_PREFIX} deleted.`
 }
 
 module.exports = {
@@ -46,5 +60,6 @@ module.exports = {
   TARGET_FILE,
   PREFIX,
   QUIZ_TYPE,
-  PATH
+  PATH,
+  FILE_MANIPULATE
 }
