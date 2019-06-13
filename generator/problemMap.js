@@ -1,22 +1,4 @@
 const problemMap = {
-  '0100': {
-    'difficulty': 'easy',
-    'problemIndex': '0100',
-    'problemName': 'Same Tree',
-    'solutionFnName': 'isSameTree',
-    'solutionArgs': 'p, q',
-    'kebabName': '0100-same-tree',
-    'solved': true
-  },
-  '0101': {
-    'difficulty': 'easy',
-    'problemIndex': '0101',
-    'problemName': 'Symmetric Tree',
-    'solutionFnName': 'isSymmetric',
-    'solutionArgs': 'root',
-    'kebabName': '0101-symmetric-tree',
-    'solved': true
-  },
   '0001': {
     'difficulty': 'easy',
     'problemIndex': '0001',
@@ -195,6 +177,24 @@ const problemMap = {
     'solutionFnName': 'merge',
     'solutionArgs': 'nums1, m, nums2, n',
     'kebabName': '0088-merge-sorted-array',
+    'solved': true
+  },
+  '0100': {
+    'difficulty': 'easy',
+    'problemIndex': '0100',
+    'problemName': 'Same Tree',
+    'solutionFnName': 'isSameTree',
+    'solutionArgs': 'p, q',
+    'kebabName': '0100-same-tree',
+    'solved': true
+  },
+  '0101': {
+    'difficulty': 'easy',
+    'problemIndex': '0101',
+    'problemName': 'Symmetric Tree',
+    'solutionFnName': 'isSymmetric',
+    'solutionArgs': 'root',
+    'kebabName': '0101-symmetric-tree',
     'solved': true
   },
   '0104': {

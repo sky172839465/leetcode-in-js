@@ -31,10 +31,17 @@ const getProblemMapContent = problemMap => {
 }
 
 const getNewProblemMap = (problemMap, newMap) => {
-  const newProblemMap = {
+  let newProblemMap = {
     ...problemMap,
     ...newMap
   }
+  newProblemMap = Object.keys(newProblemMap)
+    .map(problemIndex => newProblemMap[problemIndex])
+    .sort((a, b) => +a.problemIndex.match(/(\d)+/)[0] - +b.problemIndex.match(/(\d)+/)[0])
+    .reduce((newMap, problem) => {
+      newMap[problem.problemIndex] = problem
+      return newMap
+    }, {})
   return newProblemMap
 }
 

@@ -1,5 +1,3 @@
-const { capitalize } = require('../util')
-const problemMap = require('../problemMap')
 const badges = require('./badges')
 
 const getTitleContent = () => {
@@ -80,20 +78,16 @@ const getTableOfContents = (solutions = []) => {
   ].join('\n')
   const rows = solutions
     .map(solution => {
-      const [difficulty, index, ...names] = solution.split('-')
-      const problemName = problemMap[index]
-        ? problemMap[index].problemName
-        : names.map(name => capitalize(name)).join(' ')
-      const kebabName = names.join('-')
-      const kebabNameWithIndexPrefix = `${index}-${kebabName}`
+      const { difficulty, problemIndex, problemName, kebabName } = solution
+      const kebabNameWithoutIndex = kebabName.replace(`${problemIndex}-`, '')
       return [
         '',
-        index,
-        `[${problemName}](https://leetcode.com/problems/${kebabName})`,
+        problemIndex,
+        `[${problemName}](https://leetcode.com/problems/${kebabNameWithoutIndex})`,
         difficulty,
-        `[Solution](./src/easy/${kebabNameWithIndexPrefix}/index.js)`,
-        `[Readme](./src/easy/${kebabNameWithIndexPrefix}/README.md)`,
-        `[Test Case](./__tests__/easy/${kebabNameWithIndexPrefix}.test.js)`,
+        `[Solution](./src/easy/${kebabName}/index.js)`,
+        `[Readme](./src/easy/${kebabName}/README.md)`,
+        `[Test Case](./__tests__/easy/${kebabName}.test.js)`,
         ''
       ].join('|')
     })

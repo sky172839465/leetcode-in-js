@@ -1,4 +1,3 @@
-const fs = require('fs')
 const {
   generateFile,
   handleError
@@ -8,7 +7,6 @@ const {
   LEVEL
 } = require('../colorsLog')
 const {
-  DIFFICULTY,
   PREFIX,
   FILE_MANIPULATE,
   PATH
@@ -20,30 +18,11 @@ const {
   getProjectSetupContent,
   getTableOfContents
 } = require('./template')
-
-const getSolutionsDir = (dir) => {
-  return new Promise(resolve => {
-    fs.readdir(`src/${dir}`, (err, files = []) => {
-      if (err) throw err
-      const solutions = files
-        .filter(file => file !== 'index.js')
-        .map(file => `${dir}-${file}`)
-      resolve(solutions)
-    })
-  })
-}
-
-const difficultyPaths = [
-  DIFFICULTY.EASY,
-  DIFFICULTY.MEDIUM,
-  DIFFICULTY.HARD
-]
+const problemMap = require('../problemMap')
 
 const readme = async () => {
-  const respList = await Promise.all(difficultyPaths.map(path => getSolutionsDir(path)))
-  const allSolutions = respList
-    .reduce((total, solutions) => [...total, ...solutions], [])
-    .sort((a, b) => +a.match(/(\d)+/)[0] - +b.match(/(\d)+/)[0])
+  const allSolutions = Object.keys(problemMap)
+    .map(problemIndex => problemMap[problemIndex])
   const content = [
     getTitleContent(),
     getBadgesContent(),

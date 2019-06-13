@@ -9,10 +9,6 @@ const generateFile = (path, content) => {
   return executeAction(fs.writeFile, [path, content, 'utf8'])
 }
 
-const capitalize = str => {
-  return str.charAt(0).toUpperCase() + str.slice(1)
-}
-
 const executeAction = (action, args = []) => {
   return new Promise(resolve => {
     action(...args, (err, res) => {
@@ -54,7 +50,6 @@ const handleError = (action, args = []) => {
 
 module.exports = {
   generateFile,
-  capitalize,
   executeAction,
   deleteFolderRecursive,
   handleError
