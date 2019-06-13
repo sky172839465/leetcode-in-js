@@ -90,7 +90,7 @@ const FN_ARGS_QUIZ = {
   ])
 }
 
-const createQuestion = [
+const createQuestions = [
   DIFFICULTY_QUIZ,
   getProblemIndexQuiz(ACTION.CREATE),
   PROBLEM_NAME_QUIZ,
@@ -98,12 +98,12 @@ const createQuestion = [
   FN_ARGS_QUIZ
 ]
 
-const removeQuestion = [
+const removeQuestions = [
   getProblemIndexQuiz(ACTION.REMOVE)
 ]
 
 module.exports = {
   ACTION_QUIZ,
-  createQuestion,
-  removeQuestion
+  createQuestions,
+  removeQuestions
 }

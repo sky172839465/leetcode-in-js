@@ -38,7 +38,7 @@ const QUIZ_TYPE = {
 
 const PATH = {
   PROBLEM_MAP: 'generator/problemMap.js',
-  README: 'README.md'
+  README: './README.md'
 }
 
 const FILE_MANIPULATED_PREFIX = 'has been'
@@ -61,5 +61,7 @@ module.exports = {
   PREFIX,
   QUIZ_TYPE,
   PATH,
+  FILE_MANIPULATED_PREFIX,
+  FILE_UNMANIPULATED_PREFIX,
   FILE_MANIPULATE
 }

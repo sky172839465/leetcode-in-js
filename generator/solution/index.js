@@ -29,20 +29,20 @@ const {
 } = require('./templete')
 const {
   ACTION_QUIZ,
-  createQuestion,
-  removeQuestion
+  createQuestions,
+  removeQuestions
 } = require('./questions')
 
 const solution = async () => {
   const { action } = await inquirer.prompt([ACTION_QUIZ])
-  const QUIZ = action === ACTION.CREATE ? createQuestion : removeQuestion
+  const QUIZ_LIST = action === ACTION.CREATE ? createQuestions : removeQuestions
   const {
     difficulty,
     problemIndex,
     problemName,
     solutionFnName,
     solutionArgs
-  } = await inquirer.prompt(QUIZ)
+  } = await inquirer.prompt(QUIZ_LIST)
   const anwserFromMap = problemMap[problemIndex]
   let targetProblemName = problemName
   let targetDifficulty = difficulty

@@ -14,6 +14,7 @@ const {
   PREFIX,
   QUIZ_TYPE,
   PATH,
+  FILE_MANIPULATED_PREFIX,
   FILE_MANIPULATE
 } = require('../constants')
 const {
@@ -47,7 +48,7 @@ const solved = async () => {
     colorLog({
       level: LEVEL.WARN,
       prefix: PREFIX.SOLVED,
-      text: 'Problem has been solved.'
+      text: `Problem ${FILE_MANIPULATED_PREFIX} solved.`
     })
     return
   }
