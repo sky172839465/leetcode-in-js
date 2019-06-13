@@ -19,9 +19,9 @@ const PREFIX = {
   DIR: 'DIR',
   FILE: 'FILE',
   NOT_FOUND: 'NOT FOUND',
-  UNEXPECT_ERROR: 'Unexpect Error',
-  SOLVED: 'Solved',
-  GIT: 'Git'
+  UNEXPECT_ERROR: 'UNEXPECT ERROR',
+  SOLVED: 'SOLVED',
+  GIT: 'GIT'
 }
 
 const QUIZ_TYPE = {
