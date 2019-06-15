@@ -94,19 +94,20 @@ const solution = async () => {
   let newProblemMap
   if (solutionFnName) {
     const uniqSolutionFnName = getUniqFnName(solutionFnName)
-    const solutionContent = getSolutionContent(uniqSolutionFnName, solutionArgs)
+    const problemInfo = {
+      difficulty,
+      problemIndex,
+      problemName,
+      solutionArgs,
+      kebabName,
+      solutionFnName: uniqSolutionFnName,
+      solved: false
+    }
+    const solutionContent = getSolutionContent(problemInfo)
     const readmeContent = getReadmeContent(`${problemIndex}. ${problemName}`)
-    const testContent = getTestContent(difficulty, uniqSolutionFnName)
+    const testContent = getTestContent(problemInfo)
     newProblemMap = getNewProblemMap(problemMap, {
-      [problemIndex]: {
-        difficulty,
-        problemIndex,
-        problemName,
-        solutionArgs,
-        kebabName,
-        solutionFnName: uniqSolutionFnName,
-        solved: false
-      }
+      [problemIndex]: problemInfo
     })
     if (fs.existsSync(solutionPath)) {
       colorLog({

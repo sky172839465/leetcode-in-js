@@ -56,7 +56,7 @@ const handleError = (action, args = []) => {
       colorLog({
         level: LEVEL.ERROR,
         prefix: PREFIX.UNEXPECT_ERROR,
-        text: error.message
+        text: error
       })
       process.exit(1)
     })
