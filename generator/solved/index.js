@@ -29,6 +29,16 @@ const ACCEPT_QUIZ = {
 }
 
 const solved = async () => {
+  const enterProblemIndex = process.argv[2]
+  const problem = problemMap[enterProblemIndex]
+  if (!problem) {
+    colorLog({
+      level: LEVEL.ERROR,
+      prefix: PREFIX.NOT_FOUND,
+      text: `ProblemIndex: ${enterProblemIndex} ${FILE_MANIPULATE.NOT_CREATED}.`
+    })
+    return
+  }
   const qualityScripts = [
     { name: 'coding style', script: 'lint' },
     { name: 'code coverage', script: 'test::coverage' }
@@ -45,16 +55,6 @@ const solved = async () => {
       prefix: PREFIX.QUALITY,
       text: `Testing your ${name} success ✅`
     })
-  }
-  const enterProblemIndex = process.argv[2]
-  const problem = problemMap[enterProblemIndex]
-  if (!problem) {
-    colorLog({
-      level: LEVEL.ERROR,
-      prefix: PREFIX.NOT_FOUND,
-      text: `ProblemIndex: ${enterProblemIndex} ${FILE_MANIPULATE.NOT_CREATED}.`
-    })
-    return
   }
   const {
     problemIndex,
