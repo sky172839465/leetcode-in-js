@@ -1,7 +1,7 @@
 import { isSameTree } from '../../src/easy'
 import { createTreeNode } from '../../src/util'
 
-test('isSameTree test case', () => {
+test('0100. Same Tree', () => {
   let treeNodeP
   let treeNodeQ
   treeNodeP = createTreeNode([1, 2, 3])

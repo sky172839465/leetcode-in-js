@@ -1,7 +1,7 @@
 import { minDepth } from '../../src/easy'
 import { createTreeNode } from '../../src/util'
 
-test('minDepth test case', () => {
+test('0111. Minimum Depth of Binary Tree', () => {
   let treeNode
   treeNode = createTreeNode([3, 9, 20, null, null, 15, 7])
   expect(minDepth(treeNode)).toEqual(2)

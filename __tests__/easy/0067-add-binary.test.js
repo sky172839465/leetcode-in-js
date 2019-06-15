@@ -1,6 +1,6 @@
 import { addBinary } from '../../src/easy'
 
-test('addBinary test case', () => {
+test('0067. Add Binary', () => {
   expect(addBinary('11', '1')).toEqual('100')
   expect(addBinary('1010', '1011')).toEqual('10101')
   expect(addBinary('11', '11')).toEqual('110')

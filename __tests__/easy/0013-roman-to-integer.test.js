@@ -1,6 +1,6 @@
 import { romanToInt } from '../../src/easy'
 
-test('romanToInt test case', () => {
+test('0013. Roman to Integer', () => {
   expect(romanToInt('III')).toEqual(3)
   expect(romanToInt('IV')).toEqual(4)
   expect(romanToInt('IX')).toEqual(9)

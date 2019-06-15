@@ -1,7 +1,7 @@
 import { mergeTwoLists } from '../../src/easy'
 import { createListNode } from '../../src/util'
 
-test('mergeTwoLists test case', () => {
+test('0021. Merge Two Sorted Lists', () => {
   expect(mergeTwoLists(...[
     createListNode([1, 2, 4]),
     createListNode([1, 3, 4])

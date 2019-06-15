@@ -1,6 +1,6 @@
 import { climbStairs } from '../../src/easy'
 
-test('climbStairs test case', () => {
+test('0070. Climbing Stairs', () => {
   expect(climbStairs(0)).toEqual(1)
   expect(climbStairs(1)).toEqual(1)
   expect(climbStairs(2)).toEqual(2)

@@ -1,7 +1,7 @@
 import { isSymmetric } from '../../src/easy'
 import { createTreeNode } from '../../src/util'
 
-test('isSymmetric test case', () => {
+test('0101. Symmetric Tree', () => {
   let treeNode
   treeNode = createTreeNode([])
   expect(isSymmetric(treeNode)).toBeTruthy()

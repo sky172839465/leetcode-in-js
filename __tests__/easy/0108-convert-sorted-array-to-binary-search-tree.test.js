@@ -1,7 +1,7 @@
 import { sortedArrayToBST } from '../../src/easy'
 import { createTreeNode } from '../../src/util'
 
-test('sortedArrayToBST test case', () => {
+test('0108. Convert Sorted Array to Binary Search Tree', () => {
   let treeNode
   treeNode = createTreeNode([0, -3, 9, -10, null, 5])
   expect(sortedArrayToBST([-10, -3, 0, 5, 9])).toEqual(treeNode)

@@ -1,7 +1,7 @@
 import { levelOrderBottom } from '../../src/easy'
 import { createTreeNode } from '../../src/util'
 
-test('levelOrderBottom test case', () => {
+test('0107. Binary Tree Level Order Traversal II', () => {
   let treeNode
   let expectVal
   treeNode = createTreeNode([3, 9, 20, null, null, 15, 7])

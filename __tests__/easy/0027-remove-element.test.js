@@ -1,6 +1,6 @@
 import { removeElement } from '../../src/easy'
 
-test('removeElement test case', () => {
+test('0027. Remove Element', () => {
   const testCaseList = [
     {
       testValue: [[3, 2, 2, 3], 3],

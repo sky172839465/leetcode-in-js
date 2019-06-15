@@ -1,6 +1,6 @@
 import { generate } from '../../src/easy'
 
-test('generate test case', () => {
+test('0118. Pascal\'s Triangle', () => {
   expect(generate(5)).toEqual([
     [1],
     [1, 1],

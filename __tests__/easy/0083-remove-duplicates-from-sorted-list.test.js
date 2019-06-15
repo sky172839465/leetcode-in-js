@@ -1,7 +1,7 @@
 import { deleteDuplicates } from '../../src/easy'
 import { createListNode } from '../../src/util'
 
-test('deleteDuplicates test case', () => {
+test('0083. Remove Duplicates from Sorted List', () => {
   let testListNode
   let expectListNode
   testListNode = createListNode([1, 1, 2])

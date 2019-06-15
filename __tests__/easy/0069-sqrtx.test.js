@@ -1,6 +1,6 @@
 import { mySqrt } from '../../src/easy'
 
-test('mySqrt test case', () => {
+test('0069. Sqrt(x)', () => {
   expect(mySqrt(4)).toEqual(2)
   expect(mySqrt(8)).toEqual(2)
   expect(mySqrt(121)).toEqual(11)

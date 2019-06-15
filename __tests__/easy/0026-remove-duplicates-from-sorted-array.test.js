@@ -1,6 +1,6 @@
 import { removeDuplicates } from '../../src/easy'
 
-test('removeDuplicates test case', () => {
+test('0026. Remove Duplicates from Sorted Array', () => {
   const testCaseList = [
     {
       testValue: [1, 1, 2],
