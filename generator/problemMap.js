@@ -267,6 +267,15 @@ const problemMap = {
     'solutionArgs': 'prices',
     'kebabName': '0121-best-time-to-buy-and-sell-stock',
     'solved': true
+  },
+  '0122': {
+    'difficulty': 'easy',
+    'problemIndex': '0122',
+    'problemName': 'Best Time to Buy and Sell Stock II',
+    'solutionFnName': 'maxProfit2',
+    'solutionArgs': 'prices',
+    'kebabName': '0122-best-time-to-buy-and-sell-stock-ii',
+    'solved': true
   }
 }
 
