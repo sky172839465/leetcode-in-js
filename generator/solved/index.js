@@ -29,6 +29,23 @@ const ACCEPT_QUIZ = {
 }
 
 const solved = async () => {
+  const qualityScripts = [
+    { name: 'coding style', script: 'lint' },
+    { name: 'code coverage', script: 'test::coverage' }
+  ]
+  for (const { name, script } of qualityScripts) {
+    colorLog({
+      level: LEVEL.HELP,
+      prefix: PREFIX.QUALITY,
+      text: `Testing your ${name}...`
+    })
+    await executeAction(childProcess.exec, [`npm run ${script}`])
+    colorLog({
+      level: LEVEL.INFO,
+      prefix: PREFIX.QUALITY,
+      text: `Testing your ${name} success ✅`
+    })
+  }
   const enterProblemIndex = process.argv[2]
   const problem = problemMap[enterProblemIndex]
   if (!problem) {
@@ -64,16 +81,16 @@ const solved = async () => {
     prefix: PREFIX.FILE,
     text: `${PATH.PROBLEM_MAP} ${FILE_MANIPULATE.UPDATED}.`
   })
-  const cmds = [
+  const gitScripts = [
     'git add .',
     `git commit -m "feat: add ${+problemIndex}. ${problemName} by 🤖"`
   ]
-  for (const cmd of cmds) {
-    await executeAction(childProcess.exec, [cmd])
+  for (const script of gitScripts) {
+    await executeAction(childProcess.exec, [script])
     colorLog({
       level: LEVEL.INFO,
       prefix: PREFIX.GIT,
-      text: cmd
+      text: script
     })
   }
   const { accept } = await inquirer.prompt([ACCEPT_QUIZ])

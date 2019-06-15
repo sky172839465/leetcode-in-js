@@ -2,6 +2,7 @@ const colors = require('colors')
 
 const LEVEL = {
   INFO: 'info',
+  HELP: 'help',
   WARN: 'warn',
   ERROR: 'error'
 }

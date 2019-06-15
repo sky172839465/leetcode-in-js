@@ -10,13 +10,12 @@ const generateFile = (path, content) => {
 }
 
 const executeAction = (action, args = []) => {
-  return new Promise(resolve => {
+  return new Promise((resolve, reject) => {
     action(...args, (err, res) => {
       if (err) {
-        console.log(err)
-        process.exit()
+        reject(err)
       }
-      resolve(res)
+      resolve({ res, error: false })
     })
   })
 }
@@ -37,15 +36,15 @@ const deleteFolderRecursive = path => {
 }
 
 const handleError = (action, args = []) => {
-  try {
-    action(...args)
-  } catch (error) {
-    colorLog({
-      level: LEVEL.ERROR,
-      prefix: PREFIX.UNEXPECT_ERROR,
-      text: error.message
+  action(...args)
+    .catch(error => {
+      colorLog({
+        level: LEVEL.ERROR,
+        prefix: PREFIX.UNEXPECT_ERROR,
+        text: error.message
+      })
+      process.exit(1)
     })
-  }
 }
 
 module.exports = {
