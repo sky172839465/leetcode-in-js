@@ -7,6 +7,7 @@ const {
 const problemMap = require('../problemMap')
 const {
   generateFile,
+  getUniqFnName,
   executeAction,
   deleteFolderRecursive,
   handleError
@@ -92,17 +93,18 @@ const solution = async () => {
   }
   let newProblemMap
   if (solutionFnName) {
-    const solutionContent = getSolutionContent(solutionFnName, solutionArgs)
+    const uniqSolutionFnName = getUniqFnName(solutionFnName)
+    const solutionContent = getSolutionContent(uniqSolutionFnName, solutionArgs)
     const readmeContent = getReadmeContent(`${problemIndex}. ${problemName}`)
-    const testContent = getTestContent(difficulty, solutionFnName)
+    const testContent = getTestContent(difficulty, uniqSolutionFnName)
     newProblemMap = getNewProblemMap(problemMap, {
       [problemIndex]: {
         difficulty,
         problemIndex,
         problemName,
-        solutionFnName,
         solutionArgs,
         kebabName,
+        solutionFnName: uniqSolutionFnName,
         solved: false
       }
     })
