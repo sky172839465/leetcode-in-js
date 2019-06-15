@@ -39,6 +39,19 @@ const solved = async () => {
     })
     return
   }
+  const {
+    problemIndex,
+    problemName,
+    solved
+  } = problem
+  if (solved) {
+    colorLog({
+      level: LEVEL.WARN,
+      prefix: PREFIX.SOLVED,
+      text: `Problem ${FILE_MANIPULATED_PREFIX} solved.`
+    })
+    return
+  }
   const qualityScripts = [
     { name: 'coding style', script: 'lint' },
     { name: 'code coverage', script: 'test::coverage' }
@@ -55,19 +68,6 @@ const solved = async () => {
       prefix: PREFIX.QUALITY,
       text: `Testing your ${name} success ✅`
     })
-  }
-  const {
-    problemIndex,
-    problemName,
-    solved
-  } = problem
-  if (solved) {
-    colorLog({
-      level: LEVEL.WARN,
-      prefix: PREFIX.SOLVED,
-      text: `Problem ${FILE_MANIPULATED_PREFIX} solved.`
-    })
-    return
   }
   const newProblemMap = getNewProblemMap(problemMap, {
     [problemIndex]: {
