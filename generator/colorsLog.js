@@ -19,6 +19,7 @@ colors.setTheme({
   debug: 'blue',
   error: 'red',
   infoBG: 'bgGreen',
+  helpBG: 'bgCyan',
   warnBG: 'bgYellow',
   errorBG: 'bgRed'
 })
