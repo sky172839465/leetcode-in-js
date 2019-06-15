@@ -29,6 +29,7 @@ import generate from './0118-pascals-triangle'
 import getRow from './0119-pascals-triangle-ii'
 import maxProfit from './0121-best-time-to-buy-and-sell-stock'
 import maxProfit2 from './0122-best-time-to-buy-and-sell-stock-ii'
+import isPalindrome2 from './0125-valid-palindrome'
 
 export {
   twoSum,
@@ -61,5 +62,6 @@ export {
   generate,
   getRow,
   maxProfit,
-  maxProfit2
+  maxProfit2,
+  isPalindrome2
 }

@@ -276,6 +276,15 @@ const problemMap = {
     'solutionArgs': 'prices',
     'kebabName': '0122-best-time-to-buy-and-sell-stock-ii',
     'solved': true
+  },
+  '0125': {
+    'difficulty': 'easy',
+    'problemIndex': '0125',
+    'problemName': 'Valid Palindrome',
+    'solutionArgs': 's',
+    'kebabName': '0125-valid-palindrome',
+    'solutionFnName': 'isPalindrome2',
+    'solved': true
   }
 }
 
