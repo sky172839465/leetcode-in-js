@@ -83,7 +83,7 @@ const solved = async () => {
   })
   const gitScripts = [
     'git add .',
-    `git commit -m "feat: add ${+problemIndex}. ${problemName} by 🤖"`
+    `git commit -m "feat: add ${problemIndex}. ${problemName} by 🤖"`
   ]
   for (const script of gitScripts) {
     await executeAction(childProcess.exec, [script])

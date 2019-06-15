@@ -1,7 +1,7 @@
 const getTestContent = ({ difficulty, solutionFnName, problemIndex, problemName }) =>
   `import { ${solutionFnName} } from '../../src/${difficulty}'
 
-test('${+problemIndex}. ${problemName.replace(/'/g, '\\\'')} test case', () => {
+test('${problemIndex}. ${problemName.replace(/'/g, '\\\'')} test case', () => {
   expect(${solutionFnName}()).toEqual()
 })
 `
