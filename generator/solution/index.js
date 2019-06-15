@@ -170,8 +170,8 @@ const solution = async () => {
     prefix: PREFIX.FILE,
     text: `${exporterPath} ${FILE_MANIPULATE.UPDATED}.`
   })
-  const updateResult = await executeAction(require('child_process').exec, ['npm run update-readme'])
-  console.log(updateResult)
+  const { res } = await executeAction(require('child_process').exec, ['npm run update-readme'])
+  console.log(res)
 }
 
 handleError(solution)
