@@ -285,6 +285,15 @@ const problemMap = {
     'kebabName': '0125-valid-palindrome',
     'solutionFnName': 'isPalindrome2',
     'solved': true
+  },
+  '0136': {
+    'difficulty': 'easy',
+    'problemIndex': '0136',
+    'problemName': 'Single Number',
+    'solutionArgs': 'nums',
+    'kebabName': '0136-single-number',
+    'solutionFnName': 'singleNumber',
+    'solved': true
   }
 }
 
