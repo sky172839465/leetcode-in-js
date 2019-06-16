@@ -25,7 +25,8 @@ const {
 const ACCEPT_QUIZ = {
   type: QUIZ_TYPE.CONFIRM,
   name: 'accept',
-  message: 'Is commit log looks good ?'
+  message: 'Is commit log looks good ?',
+  default: true
 }
 
 const solved = async () => {
