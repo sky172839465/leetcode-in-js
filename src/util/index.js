@@ -37,12 +37,14 @@ const createListNode = list => {
 
 const createCircleLinkedList = (list, pos) => {
   let linkedList = createListNode(list)
-  const circlePath = [...Array(list.length - 1).keys()].map(() => 'next').join('.')
-  const targetPath = [...Array(pos).keys()].map(() => 'next').join('.')
-  let circledTarget = getObjectRef(linkedList, circlePath)
-  circledTarget.next = targetPath
-    ? getObjectRef(linkedList, targetPath)
-    : linkedList
+  if (pos > -1) {
+    const circlePath = [...Array(list.length - 1).keys()].map(() => 'next').join('.')
+    const targetPath = [...Array(pos).keys()].map(() => 'next').join('.')
+    let circledTarget = getObjectRef(linkedList, circlePath)
+    circledTarget.next = targetPath
+      ? getObjectRef(linkedList, targetPath)
+      : linkedList
+  }
   return linkedList
 }
 

@@ -35,6 +35,8 @@ test('createCircleLinkedList test case', () => {
   expect(circleLinkedList.next.next.value).toEqual(circleLinkedList.value)
   circleLinkedList = createCircleLinkedList([1, 2, 3], 1)
   expect(circleLinkedList.next.next.value).toEqual(circleLinkedList.next.value)
+  circleLinkedList = createCircleLinkedList([1, 2, 3], -1)
+  expect(circleLinkedList.next.next.value).toEqual(undefined)
 })
 
 test('createTreeNode test case', () => {
