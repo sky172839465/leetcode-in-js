@@ -1,6 +1,8 @@
 import {
   createListNode,
   getFullNodeValues,
+  getObjectRef,
+  createCircleLinkedList,
   createTreeNode
 } from '../../src/util'
 import ListNode from '../../src/util/ListNode'
@@ -19,6 +21,20 @@ test('getFullNodeValues test case', () => {
   const existListNode = createListNode([1, 2, 3])
   expect(getFullNodeValues(emptyListNode)).toEqual([])
   expect(getFullNodeValues(existListNode)).toEqual([1, 2, 3])
+})
+
+test('getObjectRef test case', () => {
+  const testValue = { a: { b: 2 } }
+  expect(getObjectRef(testValue, 'a.b')).toEqual(testValue.a.b)
+  expect(getObjectRef(testValue, 'a.b.c')).toEqual(null)
+})
+
+test('createCircleLinkedList test case', () => {
+  let circleLinkedList
+  circleLinkedList = createCircleLinkedList([1, 2, 3], 0)
+  expect(circleLinkedList.next.next.value).toEqual(circleLinkedList.value)
+  circleLinkedList = createCircleLinkedList([1, 2, 3], 1)
+  expect(circleLinkedList.next.next.value).toEqual(circleLinkedList.next.value)
 })
 
 test('createTreeNode test case', () => {

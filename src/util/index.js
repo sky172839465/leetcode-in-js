@@ -11,6 +11,12 @@ const getFullNodeValues = listNode => {
   return result
 }
 
+const getObjectRef = (obj, path) => {
+  return path
+    .split('.')
+    .reduce((o, key) => o && o[key] ? o[key] : null, obj)
+}
+
 const createListNode = list => {
   if (list.length === 0) {
     return null
@@ -27,6 +33,17 @@ const createListNode = list => {
     unprocessList = unprocessList.slice(1)
   }
   return listNode
+}
+
+const createCircleLinkedList = (list, pos) => {
+  let linkedList = createListNode(list)
+  const circlePath = [...Array(list.length - 1).keys()].map(() => 'next').join('.')
+  const targetPath = [...Array(pos).keys()].map(() => 'next').join('.')
+  let circledTarget = getObjectRef(linkedList, circlePath)
+  circledTarget.next = targetPath
+    ? getObjectRef(linkedList, targetPath)
+    : linkedList
+  return linkedList
 }
 
 const createTreeNode = nums => {
@@ -71,6 +88,8 @@ const createTreeNode = nums => {
 export {
   ListNode,
   getFullNodeValues,
+  getObjectRef,
   createListNode,
+  createCircleLinkedList,
   createTreeNode
 }
