@@ -33,7 +33,7 @@ LeetCode solution in JavaScript. ✍️
     ```
 3. **Run single solution**
     ```sh
-    $ npm run test __tests__/easy/001-two-sum.test.js
+    $ npm run test __tests__/easy/0001-two-sum.test.js
     ```
     **Run all solutions**
     ```sh
@@ -90,3 +90,4 @@ LeetCode solution in JavaScript. ✍️
 |0122|[Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii)|easy|[Solution](./src/easy/0122-best-time-to-buy-and-sell-stock-ii/index.js)|[Readme](./src/easy/0122-best-time-to-buy-and-sell-stock-ii/README.md)|[Test Case](./__tests__/easy/0122-best-time-to-buy-and-sell-stock-ii.test.js)|
 |0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome)|easy|[Solution](./src/easy/0125-valid-palindrome/index.js)|[Readme](./src/easy/0125-valid-palindrome/README.md)|[Test Case](./__tests__/easy/0125-valid-palindrome.test.js)|
 |0136|[Single Number](https://leetcode.com/problems/single-number)|easy|[Solution](./src/easy/0136-single-number/index.js)|[Readme](./src/easy/0136-single-number/README.md)|[Test Case](./__tests__/easy/0136-single-number.test.js)|
+|0141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)|easy|[Solution](./src/easy/0141-linked-list-cycle/index.js)|[Readme](./src/easy/0141-linked-list-cycle/README.md)|[Test Case](./__tests__/easy/0141-linked-list-cycle.test.js)|

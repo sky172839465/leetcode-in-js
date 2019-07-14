@@ -294,6 +294,15 @@ const problemMap = {
     'kebabName': '0136-single-number',
     'solutionFnName': 'singleNumber',
     'solved': true
+  },
+  '0141': {
+    'difficulty': 'easy',
+    'problemIndex': '0141',
+    'problemName': 'Linked List Cycle',
+    'solutionArgs': 'head',
+    'kebabName': '0141-linked-list-cycle',
+    'solutionFnName': 'hasCycle',
+    'solved': true
   }
 }
 

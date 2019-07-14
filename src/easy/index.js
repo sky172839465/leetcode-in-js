@@ -31,6 +31,7 @@ import maxProfit from './0121-best-time-to-buy-and-sell-stock'
 import maxProfit2 from './0122-best-time-to-buy-and-sell-stock-ii'
 import isPalindrome2 from './0125-valid-palindrome'
 import singleNumber from './0136-single-number'
+import hasCycle from './0141-linked-list-cycle'
 
 export {
   twoSum,
@@ -65,5 +66,6 @@ export {
   maxProfit,
   maxProfit2,
   isPalindrome2,
-  singleNumber
+  singleNumber,
+  hasCycle
 }
