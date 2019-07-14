@@ -48,7 +48,7 @@ const getProjectSetupContent = () => `
     \`\`\`
 3. **Run single solution**
     \`\`\`sh
-    $ npm run test __tests__/easy/001-two-sum.test.js
+    $ npm run test __tests__/easy/0001-two-sum.test.js
     \`\`\`
     **Run all solutions**
     \`\`\`sh
