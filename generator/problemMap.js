@@ -303,6 +303,15 @@ const problemMap = {
     'kebabName': '0141-linked-list-cycle',
     'solutionFnName': 'hasCycle',
     'solved': true
+  },
+  '0155': {
+    'difficulty': 'easy',
+    'problemIndex': '0155',
+    'problemName': 'Min Stack',
+    'solutionArgs': '',
+    'kebabName': '0155-min-stack',
+    'solutionFnName': 'MinStack',
+    'solved': true
   }
 }
 

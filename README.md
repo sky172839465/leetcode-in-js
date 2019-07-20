@@ -91,3 +91,4 @@ LeetCode solution in JavaScript. ✍️
 |0125|[Valid Palindrome](https://leetcode.com/problems/valid-palindrome)|easy|[Solution](./src/easy/0125-valid-palindrome/index.js)|[Readme](./src/easy/0125-valid-palindrome/README.md)|[Test Case](./__tests__/easy/0125-valid-palindrome.test.js)|
 |0136|[Single Number](https://leetcode.com/problems/single-number)|easy|[Solution](./src/easy/0136-single-number/index.js)|[Readme](./src/easy/0136-single-number/README.md)|[Test Case](./__tests__/easy/0136-single-number.test.js)|
 |0141|[Linked List Cycle](https://leetcode.com/problems/linked-list-cycle)|easy|[Solution](./src/easy/0141-linked-list-cycle/index.js)|[Readme](./src/easy/0141-linked-list-cycle/README.md)|[Test Case](./__tests__/easy/0141-linked-list-cycle.test.js)|
+|0155|[Min Stack](https://leetcode.com/problems/min-stack)|easy|[Solution](./src/easy/0155-min-stack/index.js)|[Readme](./src/easy/0155-min-stack/README.md)|[Test Case](./__tests__/easy/0155-min-stack.test.js)|
