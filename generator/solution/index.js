@@ -42,7 +42,7 @@ const solution = async () => {
     problemIndex,
     problemName,
     solutionFnName,
-    solutionArgs
+    solutionArgs = ''
   } = await inquirer.prompt(QUIZ_LIST)
   const anwserFromMap = problemMap[problemIndex]
   let targetProblemName = problemName

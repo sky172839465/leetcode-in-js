@@ -84,10 +84,14 @@ const FN_ARGS_QUIZ = {
   type: QUIZ_TYPE.INPUT,
   name: 'solutionArgs',
   message: 'Please enter solution function\'s args',
-  validate: input => isValid([
-    validate.required(input),
-    validate.startWithEnglish(input)
-  ])
+  validate: input => isValid(
+    input
+      ? [
+        validate.required(input),
+        validate.startWithEnglish(input)
+      ]
+      : []
+  )
 }
 
 const createQuestions = [
