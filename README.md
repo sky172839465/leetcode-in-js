@@ -11,7 +11,7 @@
 [![Conventional Commits][conventional-commits-image]][conventional-commits-url]
 
 [travis-image]: https://img.shields.io/travis/sky172839465/leetcode-in-js.svg?branch=master
-[travis-url]: https://travis-ci.org/sky172839465/leetcode-in-js
+[travis-url]: https://travis-ci.com/sky172839465/leetcode-in-js
 [codecov-image]: https://img.shields.io/codecov/c/github/sky172839465/leetcode-in-js.svg
 [codecov-url]: https://codecov.io/gh/sky172839465/leetcode-in-js
 [jest-image]: https://img.shields.io/badge/tested_with-jest-99424f.svg
